@@ -1,0 +1,231 @@
+<rdf:RDF xmlns="https://w3id.org/sao#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:ep-plan="https://w3id.org/ep-plan#" 
+xmlns:p-plan="http://purl.org/net/p-plan#" 
+xmlns:prov="http://www.w3.org/ns/prov-o#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:terms="http://purl.org/dc/terms/" xml:base="https://w3id.org/sao">
+<owl:Ontology rdf:about="https://w3id.org/sao">
+       <owl:imports rdf:resource="http://purl.org/net/p-plan"/>
+  <owl:imports rdf:resource="https://raw.githubusercontent.com/TrustLens/EP-PLAN/master/docs/ontologies/ep-plan.ttl"/>
+ <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
+ <owl:imports rdf:resource="http://dublincore.org/2012/06/14/dcterms.ttl"/>
+<terms:creator rdf:resource="https://www.abdn.ac.uk/ncs/profiles/iman.naja"/>
+<terms:creator rdf:resource="https://www.abdn.ac.uk/ncs/profiles/p.edwards"/>
+<terms:creator rdf:resource="https://www.abdn.ac.uk/ncs/profiles/milan.markovic/"/>
+<terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+<terms:title xml:lang="en">The System Accountability Ontology</terms:title>
+<rdfs:comment xml:lang="en">
+To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com
+</rdfs:comment>
+<rdfs:label>The System Accountability Ontology</rdfs:label>
+<owl:versionInfo xml:lang="en">1.0. December 2020</owl:versionInfo>
+</owl:Ontology>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://purl.org/dc/terms/creator  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+ <!--  http://purl.org/dc/terms/license  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+ <!--  http://purl.org/dc/terms/title  -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://www.w3.org/ns/prov#hadMember  -->
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hadMember"/>
+ <!--  https://w3id.org/ep-plan#correspondsToVariable  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/ep-plan#correspondsToVariable"/>
+ <!--  https://w3id.org/ep-plan#hasCorrespondingEntity  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/ep-plan#hasCorrespondingEntity"/>
+ <!--  https://w3id.org/sao#hasAccountableAgent  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#hasAccountableAgent">
+<owl:inverseOf rdf:resource="https://w3id.org/sao#isAccountableFor"/>
+<rdfs:domain rdf:resource="https://w3id.org/ep-plan#Entity"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#AccountableAgent"/>
+<rdfs:comment>Inverse of is accountable for</rdfs:comment>
+<rdfs:label>has accountable agent</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#hasRelatedAccountableResult  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#hasRelatedAccountableResult">
+<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+<owl:inverseOf rdf:resource="https://w3id.org/sao#relatesToAccountableObject"/>
+<rdfs:domain rdf:resource="https://w3id.org/sao#AccountableObject"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#AccountableResult"/>
+<rdfs:label>has related accountable result</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#hasSpecifiedAccountabiltyPlan  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#hasSpecifiedAccountabiltyPlan">
+<owl:inverseOf rdf:resource="https://w3id.org/sao#specifiedForSystem"/>
+<rdfs:domain rdf:resource="https://w3id.org/sao#System"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#AccountabilityPlan"/>
+<rdfs:comment>Inverse of specified for system.</rdfs:comment>
+<rdfs:label>has specified accountability plan</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#impacts  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#impacts">
+<owl:inverseOf rdf:resource="https://w3id.org/sao#isImpactedBy"/>
+<rdfs:domain rdf:resource="https://w3id.org/sao#AccountableObject"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#System"/>
+<rdfs:comment>
+A relation which describes that an accountable object have some effect on the system's accountability.
+</rdfs:comment>
+<rdfs:label>impacts</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#isAccountableFor  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#isAccountableFor">
+<rdfs:domain rdf:resource="https://w3id.org/sao#AccountableAgent"/>
+<rdfs:range rdf:resource="https://w3id.org/ep-plan#Entity"/>
+<rdfs:comment>
+A relation that links accountable agents to entities tehy are accountable for.
+</rdfs:comment>
+<rdfs:label>is accountable for</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#isImpactedBy  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#isImpactedBy">
+<rdfs:domain rdf:resource="https://w3id.org/sao#System"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#AccountableObject"/>
+<rdfs:comment>Inverse of impacts.</rdfs:comment>
+<rdfs:label>is impacted by</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#relatesToAccountableObject  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#relatesToAccountableObject">
+<rdfs:domain rdf:resource="https://w3id.org/sao#AccountableResult"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#AccountableObject"/>
+<rdfs:comment>
+A relation which describes the information described by an accountable result relates to an accountable object.
+</rdfs:comment>
+<rdfs:label>relates to accountable object</rdfs:label>
+</owl:ObjectProperty>
+ <!--  https://w3id.org/sao#specifiedForSystem  -->
+<owl:ObjectProperty rdf:about="https://w3id.org/sao#specifiedForSystem">
+<rdfs:domain rdf:resource="https://w3id.org/sao#AccountabilityPlan"/>
+<rdfs:range rdf:resource="https://w3id.org/sao#System"/>
+<rdfs:comment>
+A relation that links the accountability plan to the system it was specified for.
+</rdfs:comment>
+<rdfs:label>specified for system</rdfs:label>
+</owl:ObjectProperty>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  https://w3id.org/ep-plan#Agent  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#Agent"/>
+ <!--  https://w3id.org/ep-plan#Entity  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#Entity"/>
+ <!--  https://w3id.org/ep-plan#EntityCollection  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#EntityCollection"/>
+ <!--  https://w3id.org/ep-plan#MultiStep  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#MultiStep"/>
+ <!--  https://w3id.org/ep-plan#MultiVariable  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#MultiVariable"/>
+ <!--  https://w3id.org/ep-plan#Plan  -->
+<owl:Class rdf:about="https://w3id.org/ep-plan#Plan"/>
+ <!--  https://w3id.org/sao#AccountabilityPlan  -->
+<owl:Class rdf:about="https://w3id.org/sao#AccountabilityPlan">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Plan"/>
+<rdfs:comment>
+A plan which describes a specification of the information that should be collected, so as to support accountability of systems.
+</rdfs:comment>
+<rdfs:label>Accountability Plan</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#AccountableAction  -->
+<owl:Class rdf:about="https://w3id.org/sao#AccountableAction">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#MultiStep"/>
+<rdfs:comment>
+A planned step which is deemed to be important for accountability purposes and produces AccountableResult.
+</rdfs:comment>
+<rdfs:label>Accountable Action</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#AccountableAgent  -->
+<owl:Class rdf:about="https://w3id.org/sao#AccountableAgent">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Agent"/>
+<rdfs:subClassOf rdf:resource="https://w3id.org/sao#InformationElement"/>
+<rdfs:comment>
+An agent (typpically a human) that can be held accountable for his/her actions.
+</rdfs:comment>
+<rdfs:label>Accountable Agent</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#AccountableObject  -->
+<owl:Class rdf:about="https://w3id.org/sao#AccountableObject">
+<rdfs:comment>
+An accountable object models an abstract representation of a thing that should be documented for accountability. This may reference the whole system, its logical part, or associated process. For example, a larger system may be described as a group of sub-systems or a single system may be broken down into a number of layers/components (e.g., a decision logic layer).
+</rdfs:comment>
+<rdfs:label>Accountable Object</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#AccountableResult  -->
+<owl:Class rdf:about="https://w3id.org/sao#AccountableResult">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#MultiVariable"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://w3id.org/ep-plan#hasCorrespondingEntity"/>
+<owl:allValuesFrom rdf:resource="https://w3id.org/sao#InformationRealization"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>
+An output variable which is produced by an Accountable Action, for example, a decision made by a human or a specification produced by a team. The variable is part of the accountability plan and has a corresponding InformationRealization collection in the execution trace.
+</rdfs:comment>
+<rdfs:label>Accountable Result</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#InformationElement  -->
+<owl:Class rdf:about="https://w3id.org/sao#InformationElement">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#Entity"/>
+<rdfs:comment>
+A member of the collection of type Information Realization. Information Realizations may have multiple Information Elements. Information Element describes in more detail a specific type of information contained by the Information Realization collection.
+</rdfs:comment>
+<rdfs:label>Information Element</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#InformationRealization  -->
+<owl:Class rdf:about="https://w3id.org/sao#InformationRealization">
+<rdfs:subClassOf rdf:resource="https://w3id.org/ep-plan#EntityCollection"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
+<owl:allValuesFrom rdf:resource="https://w3id.org/sao#InformationElement"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="https://w3id.org/ep-plan#correspondsToVariable"/>
+<owl:allValuesFrom rdf:resource="https://w3id.org/sao#AccountableResult"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment>
+A collection of pieces of information (InformationElements) which corresponds to a variable of type AccountableResult. The collection represents the actual piece of provenance infomration documenting a specific AccountableResult durring a single plan execution.
+</rdfs:comment>
+<rdfs:label>Information Realization</rdfs:label>
+</owl:Class>
+ <!--  https://w3id.org/sao#System  -->
+<owl:Class rdf:about="https://w3id.org/sao#System">
+<rdfs:subClassOf rdf:resource="https://w3id.org/sao#AccountableObject"/>
+<rdfs:comment>
+A comuputer system that the collected accoutability information is about.
+</rdfs:comment>
+<rdfs:label>System</rdfs:label>
+</owl:Class>
+</rdf:RDF>
+<!--
+ Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ 
+-->
+
+
+
+
