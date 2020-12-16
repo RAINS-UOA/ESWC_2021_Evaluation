@@ -1,20 +1,20 @@
 # ESWC_2021_Evaluation
 
-# SHACL proof of concept test 
+## SHACL proof of concept test 
 
 See the folder shacklValidationExample
 
-# Using OOPS! Ontology Pitfall Scanner  
+## Using OOPS! Ontology Pitfall Scanner  
 
 See the folder oopsValidation for details.
 
-# Creation of Example Knowledge Graph 
+## Creation of Example Knowledge Graph 
 
 We have used the accountability fabric tool in https://github.com/RAINS-UOA/rains-workflow-builder/tree/ESWC-2020. The branch remains frozen with the snapshoot of the tool used for generating and querying the example knowledge graph. 
 
 For details about the knowledge graph see the exampleKnowledgeGraph folder 
 
-# Limitations of the tool
+## Limitations of the tool
 
 The version of the tool used for evaluation is a proof of concept and not a serious piece of software. It serves a specific purpose and it was mostly used by researchers who were aware of its insufficencies. Use at your own risk..
 
