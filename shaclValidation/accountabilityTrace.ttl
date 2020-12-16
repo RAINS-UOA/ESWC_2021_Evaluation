@@ -1,0 +1,35 @@
+
+	@prefix ex: <http://example.com/ns#> .
+	@prefix owl: <http://www.w3.org/2002/07/owl#> .
+	@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+	@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+	@prefix rains: <https://w3id.org/rains#> .
+	@prefix prov: <http://www.w3.org/ns/prov#> .
+	@prefix sao: <https://w3id.org/sao#> .
+	@prefix ep-plan: <https://w3id.org/ep-plan#> .
+	
+    
+	ex:ProduceSpecificationStep1
+		a rains:ProduceSpecification;
+		ep-plan:hasOutputVariable ex:varSpec.
+	
+	ex:varSpec
+		a rains:ModelSpecification.
+	  
+	ex:activity
+		a ep-plan:MultiActivity;
+		ep-plan:correspondsToStep ex:ProduceSpecificationStep1.
+	
+	ex:specificationReport
+		a sao:InformationRealization;
+		ep-plan:correspondsToVariable ex:varSpec;
+		prov:wasGeneratedBy ex:activity;
+		prov:hadMember ex:LimitationDesc.	
+	
+	ex:LimitationDesc 
+	a rains:Limitation;
+	rdfs:comment "The computer still does not understand me and I have to do most of the work".
+	  
+
+	 
