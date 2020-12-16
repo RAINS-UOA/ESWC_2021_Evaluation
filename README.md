@@ -2,7 +2,7 @@
 
 ## SHACL proof of concept test 
 
-See the folder shacklValidationExample
+See the folder shaclValidationExample
 
 ## Using OOPS! Ontology Pitfall Scanner  
 
