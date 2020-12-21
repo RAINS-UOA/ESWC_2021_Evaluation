@@ -3,7 +3,7 @@ This readme is composed of two sections. The first section describes the scenari
 
 ## Scenario: 
 The knowledge graph was created based on this fictional scenario. A hospital wants to replace one of its two human radiologists with an AI System which can read mammography images and detect bread cancer. This is a fictional scenario, the presented design choices are not the optimal ones, some inferior choices were deliberately made to illustrate that the design stage plays a crucial role in the preventing failures of AI Systems. Some choices were also deliberately not made to show how not following recommended accountability measure may also result in pitfalls down the line. 
-### System-level Specifications 
+#### System-level Specifications 
 1.	Produce the system's purpose specification: 
     1. Intended use case: _breast cancer detection, classifying mammography images of women between the ages of fifty and seventy_.
     2. Intended user group: _radiologists_.
