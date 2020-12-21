@@ -1,5 +1,50 @@
 # Example Knowledge Graph
+This readme is composed of two sections. The first section describes the scenario we used to create the knowledge graph. The second section consists of documentaion describing how the Accountability Fabric can be used.
 
+## Scenario: 
+The knowledge graph was created based on this fictional scenario. A hospital wants to replace one of its two human radiologists with an AI System which can read mammography images and detect bread cancer. This is a fictional scenario, the presented design choices are not the optimal ones, some inferior choices were deliberately made to illustrate that the design stage plays a crucial role in the preventing failures of AI Systems. Some choices were also deliberately not made to show how not following recommended accountability measure may also result in pitfalls down the line. 
+### System-level Specifications 
+1.	Produce the system's purpose specification: 
+    1. Intended use case: _breast cancer detection, classifying mammography images of women between the ages of fifty and seventy_.
+    2. Intended user group: _radiologists_.
+2.	Indicate compliance specifications:
+    1. hard laws: _complying with the EU's Class IIb Medical Devices Directive and GDPR_;
+    2. soft laws: _complying with the following standards: ISO 13485, ISO 14971:2019, and NHS Code of conduct for data-driven health and care technology_.
+#### Dataset Specifications
+1.	Indicate compliance specifications: 
+    1. Hard laws: _complying with GDPR_.
+    2. Soft laws: _complying with NHS Code of conduct_. 
+2.	Produce a dataset design specification by either designing a dataset or choosing an off-the-shelf one: _Use the 3rd party dataset CBIS-DDSM (https://wiki.cancerimagingarchive.net/display/Public/CBIS-DDSM). This is what is known about this dataset 
+    1. Its creator: _R. Lee_
+    2. Its characteristics: _2,620 studies in the form of films (DICOM images) covering malignant, benign, and normal diagnoses. It was originally produced as part of the DDSM_. 
+    3. Its creator(s): _the authors of this paper: https://www.nature.com/articles/sdata2017177_.
+    4.	Its funding source: _none, but the DDSM was funded by DOD Breast Cancer Research Program and US Army Research and Material Command_.
+    5. Its collection method: _collected from four American hospitals with patient consent (Massachusetts General Hospital, Wake Forest University School of Medicine, Sacred Heart Hospital, and Washington University of St Louis School of Medicine)_.
+    6. How it was pre-processed: _raw pixel data was converted into 64-bit optical density values, which were in turn re-mapped to 16-bit grey scale TIFF files and finally converted to DICOM format. A noise reduction function was applied to the DICOM format. Images were cropped and a lesion segmentation algorithm was applied. Images were split 80% marked for training and 20% marked for testing with very close percentage of case numbers in each_. 
+    7. Its intended use cases: _CAD (Computer-Aided Detection and Diagnosis) research in mammography_. 
+    8. Its limitations: _scanned film instead of full field digital mammograms_.
+    9. risks: _the DDSM was released in 1997, only 2,620 studies_.
+    10. We did not indicate this dataset's bias or its incorrrect use case.
+#### Model Specifications
+1.	Indicate compliance specifications: 
+    1. Hard laws: _complying with the EU's Class IIb Medical Devices Directive_.
+    2. Soft laws: _complying with the following standards: ISO 13485, ISO 14971:2019, and NHS Code of conduct_.  
+b.	Produce a model design specification by either designing a model or choosing an off-the-shelf one: _design a Deep learning (DL) breast cancer image analysis model, below are the information about the model_:
+    1. Its intended use cases: _computer aided breast cancer image analysis_.
+    2. Its characteristics of the model: _algorithm: Convolutional Neural_, model characteristics: _Network (CNN) minimum 7 layers, the model should classify images as: normal, benign mass, benign microcalcification, malignant mass, malignant microcalcification. Implementation plans:  programming language: Python and development environment Anaconda_
+    3. Its limitations: _it is not possible to perform feature selection or to fine-tune hyperparameters_ 
+    4. Its risks: _DL NN perform better with larger amounts of images than they do on smaller amounts (overfitting problem which can be mitigated by applying augmentation techniques)_
+    5. We did not indicate this model's bias or its incorrect use case.
+#### Evaluation Specification
+1.	Evaluation procedure: _the proposed evaluation technique is 5-fold Cross Validation (CV)_
+2.	Evaluation measure: _90% of the cancers must be detected_
+####	Supporting Specifications:   
+1.	Supporting infrastructure specification: _descriptions of the components that the system must be integrated with: The electronic health system Scottish Breast Screening System (SBSS) which contains the patient files, and with the Picture archiving and communication system (PACS) which stores the mammography images and is already integrated with SBSS. The designs of the components which are not core-AI: API wrappers for reports_. 
+2. Limitations of SI: _if PACS doesn’t produce DICOM with same picture quality then the ML model performance won’t be good_. 
+3. Audit mechanisms design: _The following will be audited: recall rates, positive predictive values, cancers missed through disagreements, and interval cancers (cancers detected between screening rounds, presenting symptomatically)_
+4.	The level of explanations to be provided by the system: _the region of interest (ROI) is to be annotated with has been diagnosed including the mass, microcalcification, architectural distortion, and bilateral asymmetry_.
+5.	Human agency and oversight mechanisms design: _one human reader will make a diagnosis and the AI System will make its diagnosis. If there is a disagreement, then a second human reader will access both diagnoses and the images and make their own diagnosis which is final_.
+5. We did not indicate compliance specifications, limitations,  for the supporting infrastructure.
 
 
 ## Guide to using the tool
