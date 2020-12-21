@@ -12,7 +12,8 @@ Download the trig file from here: https://github.com/RAINS-UOA/ESWC_2021_Evaluat
 then import it into the AccountabilityRepository on GraphDB. 
 Otherwise, you can proceed with the below instructions.
 #### D. Click on ‘Workflow Components Library’
-![](../figures/IE.png) 
+![](../figures/IE.png)
+<img src="../figures/IE.png" alt ="" width="5cm" height="12cm"/>
 #### E. On this page: 
 1.	Browse to the file containing the ontologies.
 ![](../figures/IF1.png) 
