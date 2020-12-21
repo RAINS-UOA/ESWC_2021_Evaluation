@@ -12,7 +12,7 @@ See the folder oopsValidation for details.
 
 We have used the accountability fabric tool in https://github.com/RAINS-UOA/rains-workflow-builder/tree/ESWC-2020. The branch remains frozen with the snapshoot of the tool used for generating and querying the example knowledge graph. 
 
-For details about the knowledge graph see the exampleKnowledgeGraph folder 
+For details about the knowledge graph see and how the tool was used see the exampleKnowledgeGraph folder 
 
 ## Limitations of the tool
 
