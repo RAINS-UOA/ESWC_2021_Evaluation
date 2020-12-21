@@ -8,7 +8,8 @@
 #### A. Please read the initial setup instructions here: https://github.com/RAINS-UOA/rains-workflow-builder/blob/ESWC-2020/README.md
 #### B. Run the project as ‘Spring Boot App’. By default, you can access the Accountability Framework from a browser on http://localhost:8080/. 
 #### C. If you do not want to follow the instructions below, and just want access to the example knowledge graph which was created
-Download the trig file from here: , then import it into the AccountabilityRepository on GraphDB. 
+Download the trig file from here: https://github.com/RAINS-UOA/ESWC_2021_Evaluation/blob/main/exampleKnowledgeGraph/AccountabilityFabricRepo.trig, 
+then import it into the AccountabilityRepository on GraphDB. 
 Otherwise, you can proceed with the below instructions.
 #### D. Click on ‘Workflow Components Library’
 ![](../figures/IE.png) 
