@@ -15,16 +15,15 @@ The knowledge graph was created based on this fictional scenario. A hospital wan
     1. Hard laws: _complying with GDPR_.
     2. Soft laws: _complying with NHS Code of conduct_. 
 2.	Produce a dataset design specification by either designing a dataset or choosing an off-the-shelf one: _Use the 3rd party dataset CBIS-DDSM (https://wiki.cancerimagingarchive.net/display/Public/CBIS-DDSM). This is what is known about this dataset 
-    1. Its creator: _R. Lee_
-    2. Its characteristics: _2,620 studies in the form of films (DICOM images) covering malignant, benign, and normal diagnoses. It was originally produced as part of the DDSM_. 
-    3. Its creator(s): _the authors of this paper: https://www.nature.com/articles/sdata2017177_.
-    4.	Its funding source: _none, but the DDSM was funded by DOD Breast Cancer Research Program and US Army Research and Material Command_.
-    5. Its collection method: _collected from four American hospitals with patient consent (Massachusetts General Hospital, Wake Forest University School of Medicine, Sacred Heart Hospital, and Washington University of St Louis School of Medicine)_.
-    6. How it was pre-processed: _raw pixel data was converted into 64-bit optical density values, which were in turn re-mapped to 16-bit grey scale TIFF files and finally converted to DICOM format. A noise reduction function was applied to the DICOM format. Images were cropped and a lesion segmentation algorithm was applied. Images were split 80% marked for training and 20% marked for testing with very close percentage of case numbers in each_. 
-    7. Its intended use cases: _CAD (Computer-Aided Detection and Diagnosis) research in mammography_. 
-    8. Its limitations: _scanned film instead of full field digital mammograms_.
-    9. risks: _the DDSM was released in 1997, only 2,620 studies_.
-    10. We did not indicate this dataset's bias or its incorrrect use case.
+    1. Its creator: _R. Lee and the authors of this paper: https://www.nature.com/articles/sdata2017177_.
+    2. Its characteristics: _2,620 studies in the form of films (DICOM images) covering malignant, benign, and normal diagnoses. It was originally produced as part of the DDSM_.
+    3. Its funding source: _none, but the DDSM was funded by DOD Breast Cancer Research Program and US Army Research and Material Command_.
+    4. Its collection method: _collected from four American hospitals with patient consent (Massachusetts General Hospital, Wake Forest University School of Medicine, Sacred Heart Hospital, and Washington University of St Louis School of Medicine)_.
+    5. How it was pre-processed: _raw pixel data was converted into 64-bit optical density values, which were in turn re-mapped to 16-bit grey scale TIFF files and finally converted to DICOM format. A noise reduction function was applied to the DICOM format. Images were cropped and a lesion segmentation algorithm was applied. Images were split 80% marked for training and 20% marked for testing with very close percentage of case numbers in each_. 
+    6. Its intended use cases: _CAD (Computer-Aided Detection and Diagnosis) research in mammography_. 
+    7. Its limitations: _scanned film instead of full field digital mammograms_.
+    8. risks: _the DDSM was released in 1997, only 2,620 studies_.
+    9. We did not indicate this dataset's bias or its incorrrect use case.
 #### Model Specifications
 1.	Indicate compliance specifications: 
     1. Hard laws: _complying with the EU's Class IIb Medical Devices Directive_.
@@ -44,7 +43,7 @@ b.	Produce a model design specification by either designing a model or choosing 
 3. Audit mechanisms design: _The following will be audited: recall rates, positive predictive values, cancers missed through disagreements, and interval cancers (cancers detected between screening rounds, presenting symptomatically)_
 4.	The level of explanations to be provided by the system: _the region of interest (ROI) is to be annotated with has been diagnosed including the mass, microcalcification, architectural distortion, and bilateral asymmetry_.
 5.	Human agency and oversight mechanisms design: _one human reader will make a diagnosis and the AI System will make its diagnosis. If there is a disagreement, then a second human reader will access both diagnoses and the images and make their own diagnosis which is final_.
-5. We did not indicate compliance specifications, limitations,  for the supporting infrastructure.
+5. We did not indicate compliance specifications or risks, for the supporting infrastructure.
 
 
 ## Guide to using the tool
