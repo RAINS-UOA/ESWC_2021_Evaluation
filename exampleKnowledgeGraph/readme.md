@@ -7,7 +7,7 @@ Assume that a hospital wants to replace one of its two human radiologists with a
 We present an accoountability design plan and an accountability trace asspociated with the plan. While the accountability design plan is generic and not specifically related to the medical domain, the accountability trace is an example of how those involved may produce accountability information at the design stage of an AI System, the purpose of which is to detect breast cancer. 
 Note: This is a fictional scenario, the presented design choices saved as accountability traces are **not the optimal ones**, some inferior choices were deliberately made to illustrate that the design stage plays a crucial role in the preventing failures of AI Systems. Some choices were also deliberately not made to show how not following recommended accountability measures may also result in pitfalls down the line because of the absence of this information. 
 #### The Accountability Design Plan
-##### Step 1
+##### First, we have the following two steps:
 1.	Produce Specification: System Purpose. 
     1.	Input: /
     2.	Output: System Purpose Specification _(vdp_I_sp)_. 
@@ -20,7 +20,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
     3. Description: Aim to answer the following questions
         1. What were the hard laws that the AI System must follow?
         2. What were the soft laws that the AI System must follow?
-##### Step 2
+##### Second, we have the following three steps:
 1.	Produce Specification: Dataset Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_
@@ -67,7 +67,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         2. What were the audit mechanisms described?
         3. What level of explanations could be provided by the system?
         4. What will the hard and soft laws the supporting infrastructure intends to conform with?
-##### Step 3
+##### Third, we have the following two steps:
 1.	Produce Specification: DS and Model Evaluation Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_
@@ -92,7 +92,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         1. How is the system evaluated as a whole? Does the system fail in certain settings?
         2. What are the limitations associated with the system as a whole?
         3. What are the risks (including bias) associated with the use of the AI System, directly or indirectly?
-##### Step 4
+##### Fourth, we have the following eight steps:
 1.	Decide: Confirm DS Specification Fitness
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_
@@ -143,7 +143,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         2. Supporting Infrastructure Specification _(vdp_II_sis)_
     1.	Output: Compliance Assurance Decision - SI Specification _(vdp_IV_casis)_
     1.	Description: Assurance the compliance of the suporting infrastructure specification to hard and soft laws
-##### Step 5
+##### Fifth and finally, we have the following four steps:
 1.	Decide: Approve DS Specification
     1.	Input: 
         1. Dataset Specification _(vdp_II_dss)_
