@@ -1,16 +1,188 @@
 # Example Knowledge Graph
-This readme is composed of two sections. The first section describes the scenario we used to create the knowledge graph. The second section consists of documentaion describing how the Accountability Fabric can be used.
+This readme is composed of two sections. The first section describes the scenario we used to create the knowledge graph. The second section consists of documentaion describing how the Accountability Fabric can be used. If you only want documentation on how to use the tool, without the benefit of the example scenario, jump to Section II.
 
-## Scenario: 
-The knowledge graph was created based on this fictional scenario. A hospital wants to replace one of its two human radiologists with an AI System which can read mammography images and detect bread cancer. This is a fictional scenario, the presented design choices are not the optimal ones, some inferior choices were deliberately made to illustrate that the design stage plays a crucial role in the preventing failures of AI Systems. Some choices were also deliberately not made to show how not following recommended accountability measure may also result in pitfalls down the line. 
-#### System-level Specifications 
+## Section I: Scenario: 
+The knowledge graph was created based on a fictional scenario, drawn up from our competency questions that were extracted from existing literature as well as experience from our conferences with our NHS partners.
+Assume that a hospital wants to replace one of its two human radiologists with an AI System which can read mammography images and detect breast cancer. 
+We present an accoountability design plan and an accountability trace asspociated with the plan. While the accountability design plan is generic and not specifically related to the medical domain, the accountability trace is an example of how those involved may produce accountability information at the design stage of an AI System, the purpose of which is to detect breast cancer. 
+Note: This is a fictional scenario, the presented design choices saved as accountability traces are **not the optimal ones**, some inferior choices were deliberately made to illustrate that the design stage plays a crucial role in the preventing failures of AI Systems. Some choices were also deliberately not made to show how not following recommended accountability measures may also result in pitfalls down the line because of the absence of this information. 
+#### The Accountability Design Plan
+##### Step 1
+1.	Produce Specification: System Purpose. 
+    1.	Input: /
+    2.	Output: System Purpose Specification _(vdp_I_sp)_. 
+    3. Description: Aim to answer the following questions
+        1. What were the intended objective of the AI System, i.e. what are the tasks that the AI System is performing?
+        2. Who were the intended users of the AI System?
+2.	Produce Specification: Compliance Requirements
+    1.	Input: /
+    2.	Output: Compliance Specification _(vdp_I_cr)_. 
+    3. Description: Aim to answer the following questions
+        1. What were the hard laws that the AI System must follow?
+        2. What were the soft laws that the AI System must follow?
+##### Step 2
+1.	Produce Specification: Dataset Specification
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        2. Compliance Specification _(vdp_I_cr)_
+    2. Output: Dataset Specification _(vdp_II_dss)_. 
+    3. Description: Aim to answer the following questions
+        1. What is the purpose of the dataset?
+        2. What are the tasks for which the dataset is not to be used for?
+        3. What are the limitations associated with the dataset?
+        4. What are the risks (including bias) associated with the dataset?
+        5. What is the method of data collection associated with the dataset? This includes who is involved, over what timeframe the data collection process is, how it is collected, and what are the mechanisms and procedures used.
+        6. What is the dataset pre-processing mechanism, including sampling?
+        7. What are the characteristics associated with the dataset? This includes: how many instances make up the dataset, what do the instances represent, what are the types of instances, do the instances have associated labels or targets, what are the errors/noises/redundancies in the dataset, is there any information missing from instances, are relationships between instances explicit?
+        8. What are the hard and soft laws that the dataset conforms with?
+        9. If dataset is 3rd party: 
+            1. Who created the dataset and what is their contact information?
+            2. What funding was associated with the dataset?
+            3. What license was associated with the dataset?
+2.	Produce Specification: ML Model Specification
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_ 
+        2. Compliance Specification _(vdp_I_cr_)
+    2.	Output: Model Specification _(vdp_II_mlms)_
+    3.	Description: Aim to answer the following questions
+        1. What is the purpose of the model?
+        2. What are the tasks for which the model is not to be used for?
+        3. What are the limitations associated with the model?
+        4. What are the risks (including bias) associated with the use of the model, within this system context?
+        5. What are the characteristics of the model? This includes the type of model, the algorithm, decision thresholds and basis of prioritisation – and how those were chosen, programming method. 
+        6. What are the hard and soft laws the model intends to conform with?
+        7. If model is 3rd party, then:
+            1. Who created the model and what is their contact information?
+            2. What were the licenses associated with the model?
+            3. When was the model developed?
+            4. What parameters were used when creating the model?
+            5. What was the funding associated with the model?
+3.	Produce Specification: Supporting Infrastructure Specification
+    1.	Input: 
+        1.	System Purpose Specification _(vdp_I_sp)_
+        2.	Compliance Specification _(vdp_I_cr)_
+    2.	Output:  Supporting Infrastructure Specification _(vdp_II_sis)_
+    3.	Description: Aim to answer the following questions
+        1. How was the human oversight designed to be implemented by the AI system?
+        2. What were the audit mechanisms described?
+        3. What level of explanations could be provided by the system?
+        4. What will the hard and soft laws the supporting infrastructure intends to conform with?
+##### Step 3
+1.	Produce Specification: DS and Model Evaluation Specification
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        2. Compliance Specification _(vdp_I_cr)_
+        3. Dataset Specification _(vdp_II_dss)_
+        4. Model Specification _(vdp_II_mlms)_
+    2.	Output: Evaluation Specification - DS and Model _(vdp_III_dsmlmevs)_
+    3.	Description: Aim to answer the following questions
+        1. What is the dataset used for evaluation? If not a subset of the training dataset, then what is the pre-processing method associated with the evaluation dataset?
+        1.  What was are the evaluation specification? This includes evaluation factors. 
+        1. What are the evaluation measure values? Either expected/required or if model is 3rd party then how did the model perform with respect to each evaluation factor.
+        1. What were - or will be - the hard and soft laws was the evaluation intends to conform with?
+1.	Produce Specification: System Evaluation Specification
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        1. Compliance Specification _(vdp_I_cr)_
+        1. Supporting Infrastructure Specification _(vdp_II_sis)_
+        1. Dataset Specification _(vdp_II_dss)_
+        1. Model Specification _(vdp_II_mlms)_
+    1.	Output: Evaluation Specification - Whole System  _(vdp_III_sevs)_
+    1.	Description: Aim to answer the following questions
+        1. How is the system evaluated as a whole? Does the system fail in certain settings?
+        2. What are the limitations associated with the system as a whole?
+        3. What are the risks (including bias) associated with the use of the AI System, directly or indirectly?
+##### Step 4
+1.	Decide: Confirm DS Specification Fitness
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        1. Dataset Specification _(vdp_II_dss)_
+    1.	Output: Fitness Confirmation Decision - DS Specification _(vdp_IV_cdsf)_
+    1.	Description: Confirm the fitness of the dataset specification to task
+1.	Decide: Confirm ML Specification Fitness
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        1. Model Specification _(vdp_II_mlms)_
+    1.	Output: Fitness Confirmation Decision - MLM Specification _(vdp_IV_cmlmsf)_
+    1.	Description: Confirm the fitness of the MLM specification to task
+1.	Decide: Confirm AI System Evaluation Specification Fitness
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_
+        1. DS and Model Evaluation Specification _(vdp_III_dsmlmevs)_
+        1. System Evaluation Specification _(vdp_III_sevs)_
+    1.	Output: Fitness Confirmation Decision - AI System Evaluation Specification _(vdp_IV_ceaisvsf)_
+    1.	Description: Confirm the fitness of the evaluation specification to task
+1.	Decide: Confirm Supporting Infrastructure Specification Fitness 
+    1.	Input: 
+        1. System Purpose Specification _(vdp_I_sp)_ 
+        1. Supporting Infrastructure Specification _(vdp_II_sis)_
+    1.	Output: Fitness Confirmation Decision - SI Specification _(vdp_IV_csisf)_
+    1.	Description: Confirm the fitness of the supporting infrastructure specification to task
+1.	Decide: Assure DS Specification Compliance
+    1.	Input: 
+        1. Compliance Specification _(vdp_I_cr)_
+        1. Dataset Specification _(vdp_II_dss)_
+    1.	Output: Compliance Assurance Decision - DS Specification _(vdp_IV_cadss)_
+    1.	Description: Assurance the compliance of the dataset specification to hard and soft laws
+1.	Decide: Assure ML Specification Compliance
+    1.	Input: 
+        1. Compliance Specification _(vdp_I_cr)_
+        1. Model Specification _(vdp_II_mlms)_
+    1.	Output: Compliance Assurance Decision - MLM Specification _(vdp_IV_camlms)_
+    1.	Description: Assurance the compliance of the MLM specification to hard and soft laws
+1.	Decide: Assure AI System Evaluation Specification Compliance
+    1.	Input:
+        1. Compliance Specification _(vdp_I_cr)_
+        1. DS and Model Evaluation Specification _(vdp_III_dsmlmevs)_
+        1. System Evaluation Specification _(vdp_III_sevs)_
+    1.	Output: Compliance Assurance Decision - AI System Evaluation Specification _(vdp_IV_caaisevs)_
+    1.	Description: Assurance the compliance of the AI system evaluation specification to hard and soft laws
+1.	Decide: Assure Supporting Infrastructure Specification Compliance
+    1.	Input:
+        1. Compliance Specification _(vdp_I_cr)_
+        1. Supporting Infrastructure Specification _(vdp_II_sis)_
+    1.	Output: Compliance Assurance Decision - SI Specification _(vdp_IV_casis)_
+    1.	Description: Assurance the compliance of the suporting infrastructure specification to hard and soft laws
+##### Step 5
+1.	Decide: Approve DS Specification
+    1.	Input: 
+        1. Dataset Specification _(vdp_II_dss)_
+        1. DS Specification Fitness Confirmation Decision _(vdp_IV_cdsf)_ 
+        1. DS Specification Compliance Assurance Decision _(vdp_IV_cadss)_
+    1.	Output: Approval Decision - DS Specification _(vdp_V_appdss)_
+    1.	Description: Approve the dataset specification
+1.	Decide: Approve ML Specification
+    1.	Input:
+        1. Model Specification _(vdp_II_mlms)_
+        1. MLM Specification Fitness Confirmation Decision _(vdp_IV_cmlmsf)_
+        1. MLM Specification Compliance Assurance Decision _(vdp_IV_camlms)_
+    1.	Output: Approval Decision - MLM Specification _(vdp_V_appmlms)_
+    1.	Description: Approve the MLM specification
+1.	Decide: Approve AI System Evaluation Specification
+    1.	Input: 
+        1. DS and Model Evaluation Specification _(vdp_III_dsmlmevs)_
+        1. System Evaluation Specification _(vdp_III_aisevs)_ 
+        1. Fitness Confirmation Decision _(vdp_IV_cevsf)_
+        1. Compliance Assurance Decision _(vdp_IV_caevs)_
+    1.	Output: Approval Decision - AI System Evaluation Specification _(vdp_V_appaisevs)_
+    1.	Description: Approve the AI system evaluation specification
+1.	Decide: Approve Supporting Infrastructure Specification
+    1.	Input: 
+        1.  Supporting Infrastructure Specification _(vdp_II_sis)_
+        1. SI Specification Fitness Confirmation Decision _(vdp_IV_csisf)_ 
+        1. SI Specification Compliance Assurance Decision _(vdp_IV_casis)_
+    1.	Output: Approval Decision - SI Specification _(vdp_V_appsis)_
+    1.	Description: Approve the supporting infrastructure specification
+
+#### The Collected Provenance
+##### System-level Specifications 
 1.	Produce the system's purpose specification: 
     1. Intended use case: _breast cancer detection, classifying mammography images of women between the ages of fifty and seventy_.
     2. Intended user group: _radiologists_.
 2.	Indicate compliance specifications:
     1. hard laws: _complying with the EU's Class IIb Medical Devices Directive and GDPR_;
     2. soft laws: _complying with the following standards: ISO 13485, ISO 14971:2019, and NHS Code of conduct for data-driven health and care technology_.
-#### Dataset Specifications
+##### Dataset Specifications
 1.	Indicate compliance specifications: 
     1. Hard laws: _complying with GDPR_.
     2. Soft laws: _complying with NHS Code of conduct_. 
@@ -24,7 +196,7 @@ The knowledge graph was created based on this fictional scenario. A hospital wan
     7. Its limitations: _scanned film instead of full field digital mammograms_.
     8. risks: _the DDSM was released in 1997, only 2,620 studies_.
     9. We did not indicate this dataset's bias or its incorrrect use case.
-#### Model Specifications
+##### Model Specifications
 1.	Indicate compliance specifications: 
     1. Hard laws: _complying with the EU's Class IIb Medical Devices Directive_.
     2. Soft laws: _complying with the following standards: ISO 13485, ISO 14971:2019, and NHS Code of conduct_.  
@@ -34,7 +206,7 @@ b.	Produce a model design specification by either designing a model or choosing 
     3. Its limitations: _it is not possible to perform feature selection or to fine-tune hyperparameters_ 
     4. Its risks: _DL NN perform better with larger amounts of images than they do on smaller amounts (overfitting problem which can be mitigated by applying augmentation techniques)_
     5. We did not indicate this model's bias or its incorrect use case.
-#### Evaluation Specification
+##### Evaluation Specification
 1.	Evaluation procedure: _the proposed evaluation technique is 5-fold Cross Validation (CV)_
 2.	Evaluation measure: _90% of the cancers must be detected_
 ####	Supporting Specifications:   
@@ -46,7 +218,7 @@ b.	Produce a model design specification by either designing a model or choosing 
 5. We did not indicate compliance specifications or risks, for the supporting infrastructure.
 
 
-## Guide to using the tool
+##  Section II: Guide to using the tool
 
 ### I. Initial Setup and running: 
 #### A. Please read the initial setup instructions here: https://github.com/RAINS-UOA/rains-workflow-builder/blob/ESWC-2020/README.md
