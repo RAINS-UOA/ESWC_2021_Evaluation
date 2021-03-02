@@ -296,8 +296,7 @@ Otherwise, you can proceed with the below instructions.
 ![](../figures/IIIM.png)   
 #### N. Fill in the values and click on ‘Add’:
 ![](../figures/IIIN.png)  
-#### O. The variable is now created. Click ‘Add Selected Variables’ to add it:
-![](../figures/IIIO.png)   
+#### O. The variable is now created. Click ‘Add Selected Variables’ to add it.
 #### P. The variable now appears. Click on ‘Apply Changes’ to save the changes for this step:
 ![](../figures/IIIP.png)   
 #### Q. Once you’ve finished creating all the steps, your workflow steps will look something like this:
