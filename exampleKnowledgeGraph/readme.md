@@ -177,7 +177,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
 #### The Collected Provenance
 If you are familiar with SAO and RAInS: note that the words in bold refer to the created instances of the RAInS' subclasses of SAO's Information Element.
 ##### System-level Design 
-1.	Produce the System Purpose Specification: 
+1.	Indicate the purpose of the system: 
     1. **Intended Use Case**: _breast cancer detection, classifying mammography images of women between the ages of fifty and seventy_.
     2. **Intended User Group**: _radiologists_.
 2.	Indicate compliance specifications:
