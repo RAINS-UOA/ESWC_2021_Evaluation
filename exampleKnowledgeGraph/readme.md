@@ -12,14 +12,14 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
     1.	Input: /
     2.	Output: System Purpose Specification _(vdp_I_sp)_. 
     3. Description: Aim to answer the following questions
-        1. What were the intended objective of the AI System, i.e. what are the tasks that the AI System is performing?
-        2. Who were the intended users of the AI System?
+        1. What are the intended objective of the AI System, i.e. what are the tasks that the AI System is performing?
+        2. Who are the intended users of the AI System?
 2.	Produce Specification: Compliance Requirements
     1.	Input: /
     2.	Output: Compliance Specification _(vdp_I_cr)_. 
     3. Description: Aim to answer the following questions
-        1. What were the hard laws that the AI System must follow?
-        2. What were the soft laws that the AI System must follow?
+        1. What are the hard laws that the AI System must follow?
+        2. What are the soft laws that the AI System must follow?
 ##### Second, we have the following three steps:
 1.	Produce Specification: Dataset Specification
     1.	Input: 
