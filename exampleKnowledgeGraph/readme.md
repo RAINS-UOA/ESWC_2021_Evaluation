@@ -12,14 +12,14 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
     1.	Input: /
     2.	Output: System Purpose Specification _(vdp_I_sp)_. 
     3. Description: Aim to answer the following questions
-        1. What are the intended objective of the AI System, i.e. what are the tasks that the AI System is performing?
-        2. Who are the intended users of the AI System?
+        1. What are the intended objective of the AI System, i.e. what are the tasks that the AI System is performing.
+        2. Who are the intended users of the AI System.
 2.	Produce Specification: Compliance Requirements
     1.	Input: /
     2.	Output: Compliance Specification _(vdp_I_cr)_. 
     3. Description: Aim to answer the following questions
-        1. What are the hard laws that the AI System must follow?
-        2. What are the soft laws that the AI System must follow?
+        1. What are the hard laws that the AI System must follow.
+        2. What are the soft laws that the AI System must follow.
 ##### Second, we have the following three steps:
 1.	Produce Specification: Dataset Specification
     1.	Input: 
@@ -27,46 +27,46 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         2. Compliance Specification _(vdp_I_cr)_
     2. Output: Dataset Specification _(vdp_II_dss)_. 
     3. Description: Aim to answer the following questions
-        1. What is the purpose of the dataset?
-        2. What are the tasks for which the dataset is not to be used for?
-        3. What are the limitations associated with the dataset?
-        4. What are the risks (including bias) associated with the dataset?
-        5. What is the method of data collection associated with the dataset? This includes who is involved, over what timeframe the data collection process is, how it is collected, and what are the mechanisms and procedures used.
-        6. What is the dataset pre-processing mechanism, including sampling?
-        7. What are the characteristics associated with the dataset? This includes: how many instances make up the dataset, what do the instances represent, what are the types of instances, do the instances have associated labels or targets, what are the errors/noises/redundancies in the dataset, is there any information missing from instances, are relationships between instances explicit?
-        8. What are the hard and soft laws that the dataset conforms with?
-        9. If dataset is 3rd party: 
-            1. Who created the dataset and what is their contact information?
-            2. What funding was associated with the dataset?
-            3. What license was associated with the dataset?
+        1. What is the purpose of the dataset.
+        2. What are the tasks for which the dataset is not to be used for.
+        3. What are the limitations associated with the dataset.
+        4. What are the risks (including bias) associated with the dataset.
+        5. What is the method of data collection associated with the dataset. This includes who is involved, over what timeframe the data collection process is, how it is collected, and what are the mechanisms and procedures used.
+        6. What is the dataset pre-processing mechanism, including sampling.
+        7. What are the characteristics associated with the dataset. This includes how many instances make up the dataset, what do the instances represent, what are the types of instances, do the instances have associated labels or targets, what are the errors, noises, redundancies in the dataset, is there any information missing from instances, are relationships between instances explicit.
+        8. What are the hard and soft laws that the dataset conforms with.
+        9. If dataset is 3rd party 
+            1. Who created the dataset and what is their contact information.
+            2. What funding was associated with the dataset.
+            3. What license was associated with the dataset.
 2.	Produce Specification: ML Model Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_ 
         2. Compliance Specification _(vdp_I_cr_)
     2.	Output: Model Specification _(vdp_II_mlms)_
     3.	Description: Aim to answer the following questions
-        1. What is the purpose of the model?
-        2. What are the tasks for which the model is not to be used for?
-        3. What are the limitations associated with the model?
-        4. What are the risks (including bias) associated with the use of the model, within this system context?
-        5. What are the characteristics of the model? This includes the type of model, the algorithm, decision thresholds and basis of prioritisation – and how those were chosen, programming method. 
-        6. What are the hard and soft laws the model intends to conform with?
-        7. If model is 3rd party, then:
-            1. Who created the model and what is their contact information?
-            2. What were the licenses associated with the model?
-            3. When was the model developed?
-            4. What parameters were used when creating the model?
-            5. What was the funding associated with the model?
+        1. What is the purpose of the model.
+        2. What are the tasks for which the model is not to be used for.
+        3. What are the limitations associated with the model.
+        4. What are the risks (including bias) associated with the use of the model, within this system context.
+        5. What are the characteristics of the model. This includes the type of model, the algorithm, decision thresholds and basis of prioritisation – and how those were chosen, programming method. 
+        6. What are the hard and soft laws the model intends to conform with.
+        7. If model is 3rd party, then
+            1. Who created the model and what is their contact information.
+            2. What were the licenses associated with the model.
+            3. When was the model developed.
+            4. What parameters were used when creating the model.
+            5. What was the funding associated with the model.
 3.	Produce Specification: Supporting Infrastructure Specification
     1.	Input: 
         1.	System Purpose Specification _(vdp_I_sp)_
         2.	Compliance Specification _(vdp_I_cr)_
     2.	Output:  Supporting Infrastructure Specification _(vdp_II_sis)_
     3.	Description: Aim to answer the following questions
-        1. How was the human oversight designed to be implemented by the AI system?
-        2. What were the audit mechanisms described?
-        3. What level of explanations could be provided by the system?
-        4. What will the hard and soft laws the supporting infrastructure intends to conform with?
+        1. How was the human oversight designed to be implemented by the AI system.
+        2. What were the audit mechanisms described.
+        3. What level of explanations could be provided by the system.
+        4. What will the hard and soft laws the supporting infrastructure intends to conform with.
 ##### Third, we have the following two steps:
 1.	Produce Specification: DS and Model Evaluation Specification
     1.	Input: 
@@ -76,10 +76,10 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         4. Model Specification _(vdp_II_mlms)_
     2.	Output: Evaluation Specification - DS and Model _(vdp_III_dsmlmevs)_
     3.	Description: Aim to answer the following questions
-        1. What is the dataset used for evaluation? If not a subset of the training dataset, then what is the pre-processing method associated with the evaluation dataset?
-        2. What was are the evaluation specification? This includes evaluation factors. 
-        3. What are the evaluation measure values? Either expected/required or if model is 3rd party then how did the model perform with respect to each evaluation factor.
-        4. What were - or will be - the hard and soft laws was the evaluation intends to conform with?
+        1. What is the dataset used for evaluation. If not a subset of the training dataset, then what is the pre-processing method associated with the evaluation dataset.
+        2. What was are the evaluation specification. This includes evaluation factors. 
+        3. What are the evaluation measure values. Either expected/required or if model is 3rd party then how did the model perform with respect to each evaluation factor.
+        4. What were - or will be - the hard and soft laws was the evaluation intends to conform with.
 1.	Produce Specification: System Evaluation Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_
@@ -89,9 +89,9 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         5. Model Specification _(vdp_II_mlms)_
     1.	Output: Evaluation Specification - Whole System  _(vdp_III_sevs)_
     1.	Description: Aim to answer the following questions
-        1. How is the system evaluated as a whole? Does the system fail in certain settings?
-        2. What are the limitations associated with the system as a whole?
-        3. What are the risks (including bias) associated with the use of the AI System, directly or indirectly?
+        1. How is the system evaluated as a whole. Does the system fail in certain settings.
+        2. What are the limitations associated with the system as a whole.
+        3. What are the risks (including bias) associated with the use of the AI System, directly or indirectly.
 ##### Fourth, we have the following eight steps:
 1.	Decide: Confirm DS Specification Fitness
     1.	Input: 
@@ -341,5 +341,3 @@ Otherwise, you can proceed with the below instructions.
 ![](../figures/VD2.png)  
 #### E. Clicking on an accountable action which depends on the current one its information elements:
 ![](../figures/VE.png)  
-
-
