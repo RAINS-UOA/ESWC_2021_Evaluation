@@ -323,7 +323,7 @@ Otherwise, you can proceed with the below instructions.
 6.	Fill in the other information of this information element and Click ‘Add Element’.
 7.	This step will look like the below.:
 ![](../figures/IVE7.png) 
-#### F. If a step has inputs from previous steps, it will look like this (the red rectangle highlights the inputs):
+#### F. If a step has inputs from previous steps, they will be listed in the Inputs Section:
 ![](../figures/IVF.png)
 #### G. Once you’ve finished, click submit. You will get a confirmation message:
  ![](../figures/IVG.png)
