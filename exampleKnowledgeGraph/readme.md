@@ -339,5 +339,5 @@ Otherwise, you can proceed with the below instructions.
 ![](../figures/VD1.png)  
 2.	
 ![](../figures/VD2.png)  
-#### E. Clicking on an accountable action which depends on the current one its information elements:
+#### E. Clicking on an accountable action which depends on the current one displayes its information elements:
 ![](../figures/VE.png)  
