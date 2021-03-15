@@ -35,10 +35,9 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         6. What is the dataset pre-processing mechanism, including sampling.
         7. What are the characteristics associated with the dataset. This includes how many instances make up the dataset, what do the instances represent, what are the types of instances, do the instances have associated labels or targets, what are the errors, noises, redundancies in the dataset, is there any information missing from instances, are relationships between instances explicit.
         8. What are the hard and soft laws that the dataset conforms with.
-        9. If dataset is 3rd party 
-            1. Who created the dataset and what is their contact information.
-            2. What funding was associated with the dataset.
-            3. What license was associated with the dataset.
+        9. What funding was associated with the dataset.
+        10. What license was associated with the dataset.
+        11. If dataset is 3rd party: Who created the dataset and what is their contact information.
 2.	Produce Specification: ML Model Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_ 
@@ -51,12 +50,12 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         4. What are the risks (including bias) associated with the use of the model, within this system context.
         5. What are the characteristics of the model. This includes the type of model, the algorithm, decision thresholds and basis of prioritisation – and how those were chosen, programming method. 
         6. What are the hard and soft laws the model intends to conform with.
-        7. If model is 3rd party, then
+        7. What are the licenses associated with the model.
+        8. What is the funding associated with the model.
+        9. If model is 3rd party, then
             1. Who created the model and what is their contact information.
-            2. What were the licenses associated with the model.
-            3. When was the model developed.
+            2. When was the model developed. 
             4. What parameters were used when creating the model.
-            5. What was the funding associated with the model.
 3.	Produce Specification: Supporting Infrastructure Specification
     1.	Input: 
         1.	System Purpose Specification _(vdp_I_sp)_
