@@ -208,7 +208,7 @@ Produce a model design by either designing a model or choosing an off-the-shelf 
 7. Indicate compliance specifications: 
     1. **Hard Law**: _complying with the EU's Class IIb Medical Devices Directive_.
     2. **Soft Law**: _complying with the following standards: ISO 13485, ISO 14971:2019, and NHS Code of conduct_.  
-8. We did not indicate this model's **Bias** or its **Incorrrect Use Case**.
+8. We did not indicate this model's **Bias**, **Incorrrect Use Case**, **LicenseDocument**, **Funding**.
 ##### Supporting Infrastructure Design:   
 Produce a supporting infrastructure design with the following information: _descriptions of the components that the system must be integrated with: The electronic health system Scottish Breast Screening System (SBSS) which contains the patient files, and with the Picture archiving and communication system (PACS) which stores the mammography images and is already integrated with SBSS. The designs of the components which are not core-AI: API wrappers for reports_. 
 1. **System Audit Mechanism**: _The following will be audited: recall rates, positive predictive values, cancers missed through disagreements, and interval cancers (cancers detected between screening rounds, presenting symptomatically)_
