@@ -12,7 +12,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
     1.	Input: /
     2.	Output: System Purpose Specification _(vdp_I_sp)_. 
     3. Description: Aim to answer the following questions
-        1. What are the intended objective of the AI System, i.e. what are the tasks that the AI System is performing.
+        1. What is the intended objective of the AI System, i.e. what are the tasks that the AI System is performing.
         2. Who are the intended users of the AI System.
 2.	Produce Specification: Compliance Requirements
     1.	Input: /
@@ -339,5 +339,5 @@ Otherwise, you can proceed with the below instructions.
 ![](../figures/VD1.png)  
 2.	
 ![](../figures/VD2.png)  
-#### E. Clicking on an accountable action which depends on the current one displayes its information elements:
+#### E. Clicking on an accountable action which depends on the current one displays its information elements:
 ![](../figures/VE.png)  
