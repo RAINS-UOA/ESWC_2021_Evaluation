@@ -76,9 +76,9 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
     2.	Output: Evaluation Specification - DS and Model _(vdp_III_dsmlmevs)_
     3.	Description: Aim to answer the following questions
         1. What is the dataset used for evaluation. If not a subset of the training dataset, then what is the pre-processing method associated with the evaluation dataset.
-        2. What was are the evaluation specification. This includes evaluation factors. 
+        2. What was are the evaluation procedure. This includes evaluation factors. 
         3. What are the evaluation measure values. Either expected/required or if model is 3rd party then how did the model perform with respect to each evaluation factor.
-        4. What were - or will be - the hard and soft laws was the evaluation intends to conform with.
+        4. What are the hard and soft laws the evaluation intends to conform with.
 1.	Produce Specification: System Evaluation Specification
     1.	Input: 
         1. System Purpose Specification _(vdp_I_sp)_
@@ -91,6 +91,7 @@ Note: This is a fictional scenario, the presented design choices saved as accoun
         1. How is the system evaluated as a whole. Does the system fail in certain settings.
         2. What are the limitations associated with the system as a whole.
         3. What are the risks (including bias) associated with the use of the AI System, directly or indirectly.
+        4. What are the hard and soft laws the evaluation intends to conform with.
 ##### Fourth, we have the following eight steps:
 1.	Decide: Confirm DS Specification Fitness
     1.	Input: 
