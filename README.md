@@ -21,4 +21,5 @@ The version of the tool used for evaluation is a proof of concept and not a seri
 If you attempt to run the tool please be aware of some unpredictable behaviour that may prevent your data to be saved in the graph store. This is likely related to a bug in the connection pool whcih will be looked at in future. In the meantime, to make sure that your plans and execution traces are saved always restart the server app before pressing save from the HTML page, which reduces the chances of connection freezing. Also the code currently has various validations missing including not escaping special characters that may break JSON-LD payload so be cautios when creating free text (e.g., for labels and comments) and do not use ", etc.   
 
 ---
-The work presented here is licensed under a Creative Commons Attribution NonCommercial ShareAlike 4.0 International License (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
+## License
+See the LICENSE file for license rights and limitations (BSD-3-Clause).
