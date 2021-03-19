@@ -1,0 +1,3061 @@
+@prefix : <https://w3id.org/sao#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix af: <https://rainsproject.org/af#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ep-plan: <https://w3id.org/ep-plan#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rains: <https://w3id.org/rains#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mls: <http://www.w3.org/ns/mls#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov-o#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/Systems> a af:SystemsCollection .
+}
+
+<https://rainsproject.org/Templates> {
+  <https://rainsproject.org/Templates> a af:TemplatesCollection .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  <https://rainsproject.org/WorkflowComponents> a af:ComponentCollection .
+  
+  <https://w3id.org/sao> a owl:Ontology .
+  
+  dcterms:creator a owl:AnnotationProperty .
+  
+  dcterms:license a owl:AnnotationProperty .
+  
+  dcterms:title a owl:AnnotationProperty .
+  
+  <http://www.w3.org/ns/prov#hadMember> a owl:ObjectProperty .
+  
+  ep-plan:correspondsToVariable a owl:ObjectProperty .
+  
+  ep-plan:hasCorrespondingEntity a owl:ObjectProperty .
+  
+  :hasAccountableAgent a owl:ObjectProperty .
+  
+  :isAccountableFor a owl:ObjectProperty .
+  
+  ep-plan:Entity a owl:Class .
+  
+  :AccountableAgent a owl:Class .
+  
+  :hasRelatedAccountableResult a owl:ObjectProperty .
+  
+  :relatesToAccountableObject a owl:ObjectProperty .
+  
+  :AccountableObject a owl:Class .
+  
+  :AccountableResult a owl:Class .
+  
+  :hasSpecifiedAccountabiltyPlan a owl:ObjectProperty .
+  
+  :specifiedForSystem a owl:ObjectProperty .
+  
+  :System a owl:Class .
+  
+  :AccountabilityPlan a owl:Class .
+  
+  :impacts a owl:ObjectProperty .
+  
+  :isImpactedBy a owl:ObjectProperty .
+  
+  ep-plan:Agent a owl:Class .
+  
+  ep-plan:EntityCollection a owl:Class .
+  
+  ep-plan:MultiStep a owl:Class .
+  
+  ep-plan:MultiVariable a owl:Class .
+  
+  ep-plan:Plan a owl:Class .
+  
+  :AccountableAction a owl:Class .
+  
+  :InformationElement a owl:Class .
+  
+  :InformationRealization a owl:Class .
+  
+  <https://w3id.org/rains> a owl:Ontology .
+  
+  ep-plan:hasOutputVariable a owl:ObjectProperty .
+  
+  rains:hasRealizableObjectCharacteristic a owl:ObjectProperty .
+  
+  rains:isCharacteristicOfRealizableObject a owl:ObjectProperty .
+  
+  rains:RealizableObject a owl:Class .
+  
+  rains:RealizableObjectCharacteristic a owl:Class .
+  
+  rains:isReusedObject a owl:DatatypeProperty, owl:FunctionalProperty .
+  
+  dcterms:LicenseDocument a owl:Class .
+  
+  mls:Algorithm a owl:Class .
+  
+  mls:Dataset a owl:Class .
+  
+  mls:DatasetCharacteristic a owl:Class .
+  
+  mls:EvaluationMeasure a owl:Class .
+  
+  rains:EvaluationMeassure a owl:Class .
+  
+  mls:EvaluationProcedure a owl:Class .
+  
+  rains:EvaluationProcedure a owl:Class .
+  
+  mls:Model a owl:Class .
+  
+  mls:ModelCharacteristic a owl:Class .
+  
+  rains:AI_System a owl:Class .
+  
+  rains:ApprovalDecision a owl:Class .
+  
+  rains:HumanDecision a owl:Class .
+  
+  rains:Bias a owl:Class .
+  
+  rains:Risk a owl:Class .
+  
+  rains:ComplianceAssuranceDecision a owl:Class .
+  
+  rains:ComplianceEntity a owl:Class .
+  
+  rains:ComplianceSpecification a owl:Class .
+  
+  rains:DesignSpecification a owl:Class .
+  
+  rains:DataCollectionProcedure a owl:Class .
+  
+  rains:DataPreprocessingProcedure a owl:Class .
+  
+  rains:DatasetSpecification a owl:Class .
+  
+  rains:Decide a owl:Class .
+  
+  rains:ProduceSpecification a owl:Class .
+  
+  rains:DesignStageAccountabilityPlan a owl:Class .
+  
+  rains:EvaluationSpecification a owl:Class .
+  
+  rains:FitnessConfirmationDecision a owl:Class .
+  
+  rains:Funding a owl:Class .
+  
+  rains:HardLaw a owl:Class .
+  
+  rains:SoftLaw a owl:Class .
+  
+  rains:IncorrectUseCase a owl:Class .
+  
+  rains:UseCase a owl:Class .
+  
+  rains:IntendedUseCase a owl:Class .
+  
+  rains:IntendedUserGroup a owl:Class .
+  
+  rains:Limitation a owl:Class .
+  
+  rains:ModelSpecification a owl:Class .
+  
+  rains:SupportingInfrastructure a owl:Class .
+  
+  rains:SupportingInfrastructureSpecification a owl:Class .
+  
+  rains:SystemAuditMechanism a owl:Class .
+  
+  rains:SystemExplanationMechanism a owl:Class .
+  
+  rains:SystemHumanOversightMechanism a owl:Class .
+  
+  rains:SystemPurposeSpecification a owl:Class .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://www.abdn.ac.uk/ncs/people/profiles/iman.naja> a :AccountableAgent .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/bob.smith> a :AccountableAgent .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/milan.markovic> a :AccountableAgent .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> a :AccountableObject,
+      :System, rains:AI_System, owl:NamedIndividual .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> a ep-plan:Plan,
+      rains:DesignStageAccountabilityPlan, rains:AccountabilityPlan, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/635d05f2-50ca-419e-bf1f-a177ae28df9f> a rains:AccountabilityPlan,
+      rains:ImplementationStageAccountabilityPlan .
+  
+  <https://rainsproject.org/InstanceData/be03812b-b3b3-4353-bc2c-2cbb3f7f0b6e> a rains:AccountabilityPlan,
+      rains:DeploymentStageAccountabilityPlan .
+  
+  <https://rainsproject.org/InstanceData/d6b3c826-e8ed-4388-b04b-3565faa5bca0> a rains:AccountabilityPlan,
+      rains:OperationStageAccountabilityPlan .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> a :AccountableObject .
+  
+  <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> a :AccountableObject .
+  
+  <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> a :AccountableObject .
+  
+  <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> a :AccountableObject .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  _:genid-3939e04c59b9400c80552c0136d326b8-node409 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node410 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node411 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node412 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node413 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node414 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node421 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node425 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node429 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node436 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node437 a owl:Restriction .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node438 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node445 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node449 a owl:AllDisjointClasses .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node453 a owl:AllDisjointClasses .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> a ep-plan:MultiVariable,
+      rains:SystemPurposeSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> a ep-plan:MultiStep,
+      rains:ProduceSpecification, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> a ep-plan:MultiVariable,
+      rains:ComplianceSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> a ep-plan:MultiVariable,
+      rains:DatasetSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> a ep-plan:MultiVariable,
+      rains:ModelSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> a ep-plan:MultiVariable,
+      rains:SupportingInfrastructureSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> a ep-plan:MultiVariable,
+      rains:EvaluationSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> a ep-plan:MultiStep,
+      rains:Decide, ep-plan:Step, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> a ep-plan:MultiVariable,
+      rains:EvaluationSpecification, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> a ep-plan:MultiVariable,
+      rains:FitnessConfirmationDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> a ep-plan:MultiVariable,
+      rains:FitnessConfirmationDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> a ep-plan:MultiVariable,
+      rains:FitnessConfirmationDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> a ep-plan:MultiVariable,
+      rains:FitnessConfirmationDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> a ep-plan:MultiVariable,
+      rains:ComplianceAssuranceDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> a ep-plan:MultiVariable,
+      rains:ComplianceAssuranceDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> a ep-plan:MultiVariable,
+      rains:ComplianceAssuranceDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> a ep-plan:MultiVariable,
+      rains:ComplianceAssuranceDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> a ep-plan:MultiVariable,
+      rains:ApprovalDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> a ep-plan:MultiVariable,
+      rains:ApprovalDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> a ep-plan:MultiVariable,
+      rains:ApprovalDecision, owl:NamedIndividual, ep-plan:Variable .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> a ep-plan:MultiVariable,
+      rains:ApprovalDecision, owl:NamedIndividual, ep-plan:Variable .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> a ep-plan:ExecutionTraceBundle .
+  
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/caitlin> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/c.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/w.pang> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/a.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/d.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/r.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/rebecca> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/q.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/p.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/o.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/n.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/m.smith> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> a owl:NamedIndividual,
+      ep-plan:MultiActivity, ep-plan:Activity .
+  
+  <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/p.edwards> a :AccountableAgent .
+  
+  <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/c8cc861b-b4a5-4e2e-9e6d-1ac21287cdc0> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/4124f46a-b007-48a4-b352-95490cf6fd15> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/e9694fb3-b627-4bad-81b9-3fc140e7bc30> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/508cd1d7-2f9c-4c5a-acb8-e775c4e02374> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/5e03cf2c-0a97-4857-a6b6-6e8a7c8b08af> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/c71d7ecc-9f32-4142-b06c-44e36c705e3e> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/db4ba7ec-f8a4-4fc2-8872-cdee977b1c5a> a ep-plan:EntityCollection,
+      :InformationRealization, owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/bd6d0e04-e9d4-4ca1-84a5-8a3ff994acd9> a rains:HardLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/ebf6679a-ec90-4d70-b6cf-0edea9ac4ab0> a rains:SoftLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/a7ab4e94-f276-464d-a375-30291b295e48> a rains:IntendedUseCase,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d10c0b71-4563-43a3-b89d-57bec4217baf> a rains:IntendedUserGroup,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> a mls:Dataset,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/158b2107-4250-4be7-a35e-812f1231266a> a mls:DatasetCharacteristic,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/1fd4a69f-3700-416c-84e2-1347f3c50acf> a rains:Funding,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/3218db60-49be-4f25-a10c-60a990209056> a rains:DataCollectionProcedure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/27ed453a-6933-4720-85ea-912a70e1a4ec> a rains:DataPreprocessingProcedure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/7b871b89-59f0-4091-9727-92abda2672f6> a rains:IntendedUseCase,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/648ecbf7-a6d7-47b3-a165-8442abefd4ea> a rains:Limitation,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/3733cc6a-fa95-42d4-b163-a91af799a2d9> a rains:Risk,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/6cf16252-3a31-4f5f-be14-b204ea8164b6> a dcterms:LicenseDocument,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/9f9150ad-3040-489e-bbc0-c5a2944d54b1> a rains:HardLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/fee0d47b-a4f0-4b12-bd53-77333813b890> a rains:SoftLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> a rains:SupportingInfrastructure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/1cedca06-0123-426e-9036-bc44844ca955> a rains:SystemAuditMechanism,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/b56b6add-3ff9-4898-bdee-342414f721aa> a rains:SystemExplanationMechanism,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/8c826116-5132-48d4-905c-362b36a749ec> a rains:SystemHumanOversightMechanism,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/ce7c57c9-3875-4e86-aa3f-e6447244bdae> a rains:Limitation,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> a mls:Model,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/22444a86-a0fb-4ecd-a177-11f60d0e18b0> a rains:IntendedUseCase,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/d22e6d8b-f00a-4d75-9dc3-8a0581bfc809> a mls:Algorithm,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/44e08eb6-55b2-4e3a-b75a-acc35ed98f8e> a mls:ModelCharacteristic,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/278605bd-fe99-4936-97d0-7c225356638e> a rains:Limitation,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/e0fd79f2-dc04-42a8-9a30-2fd47e7515d0> a rains:Risk,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/cf9abe46-cfe0-46f6-926b-223846f953a3> a rains:HardLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/4beac876-690f-453c-8611-ba237a84e1a8> a rains:SoftLaw,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/27d07911-d8da-4f99-b0e2-8cfbc0cd977c> a mls:EvaluationMeasure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/1ba7e974-5c55-4250-bb20-2b7f31130223> a rains:EvaluationMeassure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/1b635f72-74f6-4ffd-9c93-891e39d7cec6> a mls:EvaluationProcedure,
+      owl:NamedIndividual .
+  
+  <https://rainsproject.org/InstanceData/96060ef9-7567-40c1-9e7a-27250e46c329> a mls:EvaluationMeasure,
+      owl:NamedIndividual .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  :hasRelatedAccountableResult rdfs:subPropertyOf owl:topObjectProperty .
+  
+  :AccountableAgent rdfs:subClassOf ep-plan:Agent, :InformationElement .
+  
+  :AccountableResult rdfs:subClassOf ep-plan:MultiVariable, _:genid-3939e04c59b9400c80552c0136d326b8-node409 .
+  
+  :System rdfs:subClassOf :AccountableObject .
+  
+  :AccountabilityPlan rdfs:subClassOf ep-plan:Plan .
+  
+  :AccountableAction rdfs:subClassOf ep-plan:MultiStep .
+  
+  :InformationElement rdfs:subClassOf ep-plan:Entity .
+  
+  :InformationRealization rdfs:subClassOf ep-plan:EntityCollection, _:genid-3939e04c59b9400c80552c0136d326b8-node410,
+      _:genid-3939e04c59b9400c80552c0136d326b8-node411 .
+  
+  rains:RealizableObject rdfs:subClassOf :InformationElement .
+  
+  rains:RealizableObjectCharacteristic rdfs:subClassOf :InformationElement .
+  
+  dcterms:LicenseDocument rdfs:subClassOf :InformationElement .
+  
+  mls:Algorithm rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  mls:Dataset rdfs:subClassOf rains:RealizableObject .
+  
+  mls:DatasetCharacteristic rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  mls:EvaluationMeasure rdfs:subClassOf rains:EvaluationMeassure .
+  
+  rains:EvaluationMeassure rdfs:subClassOf :InformationElement .
+  
+  mls:EvaluationProcedure rdfs:subClassOf rains:EvaluationProcedure .
+  
+  rains:EvaluationProcedure rdfs:subClassOf :InformationElement .
+  
+  mls:Model rdfs:subClassOf rains:RealizableObject .
+  
+  mls:ModelCharacteristic rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  rains:AI_System rdfs:subClassOf :System .
+  
+  rains:ApprovalDecision rdfs:subClassOf rains:HumanDecision .
+  
+  rains:HumanDecision rdfs:subClassOf :AccountableResult .
+  
+  rains:Bias rdfs:subClassOf rains:Risk .
+  
+  rains:Risk rdfs:subClassOf :InformationElement .
+  
+  rains:ComplianceAssuranceDecision rdfs:subClassOf rains:HumanDecision .
+  
+  rains:ComplianceEntity rdfs:subClassOf :InformationElement .
+  
+  rains:ComplianceSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  rains:DesignSpecification rdfs:subClassOf :AccountableResult .
+  
+  rains:DataCollectionProcedure rdfs:subClassOf :InformationElement .
+  
+  rains:DataPreprocessingProcedure rdfs:subClassOf :InformationElement .
+  
+  rains:DatasetSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  rains:Decide rdfs:subClassOf :AccountableAction, _:genid-3939e04c59b9400c80552c0136d326b8-node412,
+      _:genid-3939e04c59b9400c80552c0136d326b8-node436 .
+  
+  rains:ProduceSpecification rdfs:subClassOf :AccountableAction, _:genid-3939e04c59b9400c80552c0136d326b8-node413,
+      _:genid-3939e04c59b9400c80552c0136d326b8-node437 .
+  
+  rains:DesignStageAccountabilityPlan rdfs:subClassOf :AccountabilityPlan .
+  
+  rains:EvaluationSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  rains:FitnessConfirmationDecision rdfs:subClassOf rains:HumanDecision .
+  
+  rains:Funding rdfs:subClassOf :InformationElement .
+  
+  rains:HardLaw rdfs:subClassOf rains:ComplianceEntity .
+  
+  rains:SoftLaw rdfs:subClassOf rains:ComplianceEntity .
+  
+  rains:IncorrectUseCase rdfs:subClassOf rains:UseCase .
+  
+  rains:UseCase rdfs:subClassOf :InformationElement .
+  
+  rains:IntendedUseCase rdfs:subClassOf rains:UseCase .
+  
+  rains:IntendedUserGroup rdfs:subClassOf :InformationElement .
+  
+  rains:Limitation rdfs:subClassOf :InformationElement .
+  
+  rains:ModelSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  rains:SupportingInfrastructure rdfs:subClassOf rains:RealizableObject .
+  
+  rains:SupportingInfrastructureSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  rains:SystemAuditMechanism rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  rains:SystemExplanationMechanism rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  rains:SystemHumanOversightMechanism rdfs:subClassOf rains:RealizableObjectCharacteristic .
+  
+  rains:SystemPurposeSpecification rdfs:subClassOf rains:DesignSpecification .
+  
+  :hasAccountableAgent rdfs:domain ep-plan:Entity .
+  
+  :isAccountableFor rdfs:domain :AccountableAgent .
+  
+  :hasRelatedAccountableResult rdfs:domain :AccountableObject .
+  
+  :relatesToAccountableObject rdfs:domain :AccountableResult .
+  
+  :hasSpecifiedAccountabiltyPlan rdfs:domain :System .
+  
+  :specifiedForSystem rdfs:domain :AccountabilityPlan .
+  
+  :impacts rdfs:domain :AccountableObject .
+  
+  :isImpactedBy rdfs:domain :System .
+  
+  rains:hasRealizableObjectCharacteristic rdfs:domain rains:RealizableObject .
+  
+  rains:isCharacteristicOfRealizableObject rdfs:domain rains:RealizableObjectCharacteristic .
+  
+  rains:isReusedObject rdfs:domain rains:RealizableObject .
+  
+  :hasAccountableAgent rdfs:range :AccountableAgent .
+  
+  :isAccountableFor rdfs:range ep-plan:Entity .
+  
+  :hasRelatedAccountableResult rdfs:range :AccountableResult .
+  
+  :relatesToAccountableObject rdfs:range :AccountableObject .
+  
+  :hasSpecifiedAccountabiltyPlan rdfs:range :AccountabilityPlan .
+  
+  :specifiedForSystem rdfs:range :System .
+  
+  :impacts rdfs:range :System .
+  
+  :isImpactedBy rdfs:range :AccountableObject .
+  
+  rains:hasRealizableObjectCharacteristic rdfs:range rains:RealizableObjectCharacteristic .
+  
+  rains:isCharacteristicOfRealizableObject rdfs:range rains:RealizableObject .
+  
+  rains:isReusedObject rdfs:range xsd:boolean .
+  
+  <https://w3id.org/sao> dcterms:creator <https://www.abdn.ac.uk/ncs/profiles/iman.naja>,
+      <https://www.abdn.ac.uk/ncs/profiles/p.edwards>, <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> .
+  
+  <https://w3id.org/rains> dcterms:creator <https://www.abdn.ac.uk/ncs/profiles/iman.naja>,
+      <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/>, "https://www.abdn.ac.uk/ncs/profiles/p.edwards" .
+  
+  <https://w3id.org/sao> dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+  
+  <https://w3id.org/rains> dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+  
+  <https://w3id.org/sao> dcterms:title "The System Accountability Ontology"@en .
+  
+  <https://w3id.org/rains> dcterms:title "The RAInS Ontology"@en .
+  
+  <https://w3id.org/sao> rdfs:comment "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en .
+  
+  :hasAccountableAgent rdfs:comment "Inverse of is accountable for" .
+  
+  :isAccountableFor rdfs:comment "A relation that links accountable agents to entities they are accountable for." .
+  
+  :AccountableAgent rdfs:comment "An agent (typically a human)  that can be held accountable for his/her actions." .
+  
+  :relatesToAccountableObject rdfs:comment "A relation which describes the information described by an accountable result relates to an accountable object." .
+  
+  :AccountableObject rdfs:comment "An accountable object models an abstract representation of a thing that should be documented for accountability. This may reference the whole system, its logical part, or associated process.  For example, a larger system may be described as a group of sub-systems or a single system may be broken down into a number of layers/components (e.g., a decision logic layer)." .
+  
+  :AccountableResult rdfs:comment "An output variable which is produced by an Accountable Action, for example,  a decision made by a human or a specification produced by a team. The variable is part of the accountability plan and has a corresponding InformationRealization collection in the execution trace." .
+  
+  :hasSpecifiedAccountabiltyPlan rdfs:comment "Inverse of specified for system." .
+  
+  :specifiedForSystem rdfs:comment "A relation that links the accountability plan to the system it was specified for." .
+  
+  :System rdfs:comment "A system that the collected accountability information is about." .
+  
+  :AccountabilityPlan rdfs:comment "A plan which describes a specification of the information that should be collected, so as to support accountability of systems." .
+  
+  :impacts rdfs:comment "A relation which describes that an accountable object have some effect on the system's accountability." .
+  
+  :isImpactedBy rdfs:comment "Inverse of impacts." .
+  
+  :AccountableAction rdfs:comment "A planned step which is deemed to be important for accountability purposes and produces AccountableResult." .
+  
+  :InformationElement rdfs:comment "A member of the collection of type Information Realization. Information Realizations may have multiple Information Elements.  Information Element describes in more detail a specific type of information contained by the Information Realization collection." .
+  
+  :InformationRealization rdfs:comment "A collection of pieces of information (InformationElements) which corresponds to a variable of type  AccountableResult. The collection represents the actual piece of provenance information documenting a specific AccountableResult during a single plan execution." .
+  
+  <https://w3id.org/rains> rdfs:comment "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en .
+  
+  rains:hasRealizableObjectCharacteristic rdfs:comment "A relation that links a realizable object (e.g., model) to the information element describing its characteristic." .
+  
+  rains:isCharacteristicOfRealizableObject rdfs:comment "Inverse of hasRealizableObjectCharacteristic" .
+  
+  rains:RealizableObject rdfs:comment "A sao:InformationElement  which records  information detailing  a piece of data, software or hardware that may be realized during the Implementation stage. A reused objects (e.g., public training datasets) is also considered as :RealizableObject during the Design stage as it is not yet implemented (i.e., physical copies have not yet been integrated withing the ML pipeline)" .
+  
+  rains:RealizableObjectCharacteristic rdfs:comment "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject." .
+  
+  rains:isReusedObject rdfs:comment "A value indicating whether the :RealizableObject is a third party resource." .
+  
+  rains:EvaluationMeassure rdfs:comment "A  sao:InformationElement which records a specific piece of  information detailing some measure used as part of an evaluation process. This is broader than mls:EvaluationMeassure which describes a measure related to a model performance." .
+  
+  rains:EvaluationProcedure rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing procedure by which some aspects of an :AI_Sytem were evaluated. this is broader than mls:EvaluationProcedure which relates to model evaluation." .
+  
+  rains:AI_System rdfs:comment "The AI System for which the accountability plan is specified." .
+  
+  rains:ApprovalDecision rdfs:comment "A specific type of a planned human decision representing approvals and sign offs." .
+  
+  rains:HumanDecision rdfs:comment "A specific type of a planned sao:AccountableResult which represents a decision made by a human." .
+  
+  rains:Bias rdfs:comment "A type of :Risk  which records a specific piece of  information detailing a potential inclination or prejudice related to some aspects of :AI_Sytem (e.g., a training dataset containing more data about males when both genders will be considered by the ML model)" .
+  
+  rains:Risk rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing possible undesired or dangerous outcomes caused by any aspects of :AI_Sytem." .
+  
+  rains:ComplianceAssuranceDecision rdfs:comment "A specific type of a planned human decision representing confirmation of compliance of some sao:AccountableResult (e.g., a model specification) with its compliance requirements." .
+  
+  rains:ComplianceEntity rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information about  a compliance requirement that is to be complied with as part of an information realization collection." .
+  
+  rains:ComplianceSpecification rdfs:comment "A specific type of design specification  which represents the  description of a compliance requirement." .
+  
+  rains:DesignSpecification rdfs:comment "A specific type of planned sao:AccountableResult which represents a high reference to a specification  (e.g. a specification report) that is expected to be produced during the design stage in order to inform the future AI system lifecycle stages (e.g. implementation)." .
+  
+  rains:DataCollectionProcedure rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is collected. This includes the information about mechanism used for collecting data (e.g. hardware sensors, software program, or manually), the timeframe over which the data was collected, any consent reporting, etc." .
+  
+  rains:DataPreprocessingProcedure rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is preprocessed. This includes information on what is done to the data (e.g., cleaning, sampling, filtering, feature engineering, etc) and how it is done (e.g., manually, programmatically, or using feature engineering software)." .
+  
+  rains:DatasetSpecification rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle." .
+  
+  rains:Decide rdfs:comment "A planned step describing a decision to be taken by a human when incorporating accountability in AI Systems, e.g. approve the design of an ML Model." .
+  
+  rains:ProduceSpecification rdfs:comment "A planned step describing the creation of a specification that has some impact on the AI System, e.g. the production of the design specification describing the training dataset to be used." .
+  
+  rains:DesignStageAccountabilityPlan rdfs:comment "A plan that identifies sao:AccountableAction(s) and sao:AccountableResult(s) relevant to the design stage of an AI system and  which are required to be documented for accountability purposes." .
+  
+  rains:EvaluationSpecification rdfs:comment "A specific type of design specification which represents the description  of a planned evaluation process." .
+  
+  rains:FitnessConfirmationDecision rdfs:comment "A specific type of planned human decision representing confirmation of fitness of some sao:AccountableResult t to its purpose." .
+  
+  rains:Funding rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing a funding source." .
+  
+  rains:HardLaw rdfs:comment "A specific type of compliance entity which  records a specific piece of  information about the laws and regulations that must be complied with as part of an information realization collection." .
+  
+  rains:SoftLaw rdfs:comment "A specific type of compliance entity which  records a specific piece of  information about the procedures, standards, protocols, etc that complying with is desired or encouraged as part of an information realization collection." .
+  
+  rains:IncorrectUseCase rdfs:comment "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole should not be used." .
+  
+  rains:UseCase rdfs:comment "A sao:InformationElement which records a specific piece of information detailing a situation in which any component of :AI_System or the system as whole could potentially be used." .
+  
+  rains:IntendedUseCase rdfs:comment "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole is expected to be used." .
+  
+  rains:IntendedUserGroup rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing the target user audience for the functionality of the overall :AI_System or the components used to develop such system (e.g., a reused public training dataset or a model would be associated with this information)." .
+  
+  rains:Limitation rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing the limitations of any aspect related to an :AI_System including the system as whole, its components (e.g., ML model),  or associated processes (e.g., evaluation)." .
+  
+  rains:ModelSpecification rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, performance, etc. related to an AI model." .
+  
+  rains:SupportingInfrastructure rdfs:comment "A type of :RealizableObject detailing the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in :AI_System." .
+  
+  rains:SupportingInfrastructureSpecification rdfs:comment "A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems." .
+  
+  rains:SystemAuditMechanism rdfs:comment "A type of :RealizableObjectCharacteristic detailing how :AI_System may be interrogated about its inner processes and outputs produced." .
+  
+  rains:SystemExplanationMechanism rdfs:comment "A type of :RealizableObjectCharacteristic detailing how :AI_System produces human readable clarifications and justifications of its inner processes and outputs produced." .
+  
+  rains:SystemHumanOversightMechanism rdfs:comment "A type of :RealizableObjectCharacteristic detailing how :AI_System integrates human operators in its decision processes to offer them the opportunity to stop, review, or alter the outputs produced by the system." .
+  
+  rains:SystemPurposeSpecification rdfs:comment "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and used for." .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> rdfs:comment
+      "This AI System was created to evaluate the NHS BCSS use case" .
+  
+  <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> rdfs:comment
+      "Decision Logic about Dataset" .
+  
+  <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> rdfs:comment
+      "Decision Logic about ML Model" .
+  
+  <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> rdfs:comment
+      "Decision Logic about Evaluation" .
+  
+  <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> rdfs:comment
+      "Decision Logic about Supporting Infrastructure" .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> rdfs:comment
+      "Aim to answer the following questions. 1, What are the intended objective of the AI System, i.e. what are the tasks that the AI System is performing. 2 Who are the intended users of the AI System." .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> rdfs:comment
+      "Link to intended users and intended use case" .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> rdfs:comment
+      "Aim to answer the following questions. 1, What is the purpose of the dataset. 2, What are the tasks for which the dataset is not to be used for. 3, What are the limitations associated with the dataset. 4, What are the risks (including bias) associated with the dataset. 5, What is the method of data collection associated with the dataset. This includes who is involved, over what timeframe the data collection process is, how it is collected, and what are the mechanisms and procedures used. 6, What is the dataset pre-processing mechanism, including sampling. 7, What are the characteristics associated with the dataset. This includes how many instances make up the dataset, what do the instances represent, what are the types of instances, do the instances have associated labels or targets, what are the errors, noises, redundancies in the dataset, is there any information missing from instances, are relationships between instances explicit. 8, What are the hard and soft laws that the dataset conforms with. 9, If dataset is 3rd party then 9a, Who created the dataset and what is their contact information. 9b, What funding was associated with the dataset. 9c, What license was associated with the dataset." .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> rdfs:comment
+      "Aim to answer the following questions. 1, What is the purpose of the model. 2, What are the tasks for which the model is not to be used for. 3, What are the limitations associated with the model. 4, What are the risks (including bias) associated with the use of the model, within this system context. 5, What are the characteristics of the model. This includes the type of model, the algorithm, decision thresholds and basis of prioritisation – and how those were chosen, programming method. 6, What are the hard and soft laws the model intends to conform with. 7, If model is 3rd party, then 7a,  Who created the model and what is their contact information. 7b, What were the licenses associated with the model. 7c, When was the model developed. 7d, What parameters were used when creating the model. 7e, What was the funding associated with the model." .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> rdfs:comment
+      "Aim to answer the following questions. 1, How was the human oversight designed to be implemented by the AI system. 2, What were the audit mechanisms described. 3, What level of explanations could be provided by the system. 4, What will the hard and soft laws the supporting infrastructure intends to conform with." .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> rdfs:comment
+      "Aim to answer the following questions. 1, What is the dataset used for evaluation. If not a subset of the training dataset, then what is the pre-processing method associated with the evaluation dataset. 2, What was are the evaluation specification. This includes evaluation factors. 3, What are the evaluation measure values. Either expected/required or if model is 3rd party then how did the model perform with respect to each evaluation factor. 4, What were - or will be - the hard and soft laws was the evaluation intends to conform with." .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> rdfs:comment
+      "Aim to answer the following questions, 1, How is the system evaluated as a whole. Does the system fail in certain settings. 2, What are the limitations associated with the system as a whole. 3, What are the risks (including bias) associated with the use of the AI System, directly or indirectly." .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> rdfs:comment
+      "Aim to answer the following questions. 1, What are the hard laws that the AI System must follow. 2, What are the soft laws that the AI System must follow." .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> rdfs:comment
+      "The System Compliance Specification" .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> rdfs:comment
+      "The Dataset Specification" .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> rdfs:comment
+      "ML Model Specification" .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> rdfs:comment
+      "The Supporting Infrastructure Specification" .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> rdfs:comment
+      "The Evaluation Specification for DS and MLM" .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> rdfs:comment
+      "default comment" .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> rdfs:comment
+      "the Evaluation Specification for the Whole System" .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> rdfs:comment
+      "Fitness Confirmation Decision for DS" .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> rdfs:comment
+      "Fitness Confirmation Decision for MLM Specification" .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> rdfs:comment
+      "Fitness Confirmation Decision for AI System Evaluation Specification" .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> rdfs:comment
+      "Fitness Confirmation Decision for SI Specification" .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> rdfs:comment
+      "Compliance Assurance Decision for DS Specification" .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> rdfs:comment
+      "Compliance Assurance Decision for MLM Specification" .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> rdfs:comment
+      "Compliance Assurance Decision for AI System Evaluation Specification" .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> rdfs:comment
+      "Compliance Assurance Decision for SI Specification" .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> rdfs:comment
+      "Approval Decision for DS Specification" .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> rdfs:comment
+      "Approval Decision for MLM Specification" .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> rdfs:comment
+      "Approval Decision - AI System Evaluation Specification" .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> rdfs:comment
+      "Approval Decision for SI Specification" .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> rdfs:comment
+      "I approve" .
+  
+  <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> rdfs:comment
+      "AI System compliance requirements hard and soft laws" .
+  
+  <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> rdfs:comment
+      "The design specification of the Supporting infrastructure" .
+  
+  <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> rdfs:comment
+      "The design specification of the ML Model" .
+  
+  <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> rdfs:comment
+      "The design specification for the training dataset to be used to build the ML model, based on the reused 3rd party dataset CBISDDSM" .
+  
+  <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> rdfs:comment
+      "The evaluation specs for the whole system" .
+  
+  <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> rdfs:comment
+      "Complying" .
+  
+  <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> rdfs:comment
+      "Complies" .
+  
+  <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> rdfs:comment
+      "It does comply" .
+  
+  <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> rdfs:comment
+      "I think it complies" .
+  
+  <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> rdfs:comment
+      "A commercial solution for analysing mammography images." .
+  
+  <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> rdfs:comment
+      "The evaluation specs for the Dataset and Model" .
+  
+  <https://rainsproject.org/InstanceData/c8cc861b-b4a5-4e2e-9e6d-1ac21287cdc0> rdfs:comment
+      "Confirmed" .
+  
+  <https://rainsproject.org/InstanceData/4124f46a-b007-48a4-b352-95490cf6fd15> rdfs:comment
+      "Confirmed" .
+  
+  <https://rainsproject.org/InstanceData/e9694fb3-b627-4bad-81b9-3fc140e7bc30> rdfs:comment
+      "Confirm" .
+  
+  <https://rainsproject.org/InstanceData/508cd1d7-2f9c-4c5a-acb8-e775c4e02374> rdfs:comment
+      "I Confirmed" .
+  
+  <https://rainsproject.org/InstanceData/5e03cf2c-0a97-4857-a6b6-6e8a7c8b08af> rdfs:comment
+      "Approved" .
+  
+  <https://rainsproject.org/InstanceData/c71d7ecc-9f32-4142-b06c-44e36c705e3e> rdfs:comment
+      "Approval granted" .
+  
+  <https://rainsproject.org/InstanceData/db4ba7ec-f8a4-4fc2-8872-cdee977b1c5a> rdfs:comment
+      "I approved" .
+  
+  <https://rainsproject.org/InstanceData/bd6d0e04-e9d4-4ca1-84a5-8a3ff994acd9> rdfs:comment
+      "comply with the EU Class IIb Medical Devices Directive and GDPR" .
+  
+  <https://rainsproject.org/InstanceData/ebf6679a-ec90-4d70-b6cf-0edea9ac4ab0> rdfs:comment
+      "ISO 13485, ISO 149712019, and NHS Code of conduct for data-driven health and care technology" .
+  
+  <https://rainsproject.org/InstanceData/a7ab4e94-f276-464d-a375-30291b295e48> rdfs:comment
+      "To be deployed in NHS Scotland hospitals and health centres for annotating images produced by mammography machines taken from women between 50 and 70 years old." .
+  
+  <https://rainsproject.org/InstanceData/d10c0b71-4563-43a3-b89d-57bec4217baf> rdfs:comment
+      "" .
+  
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> rdfs:comment
+      "3rd party dataset" .
+  
+  <https://rainsproject.org/InstanceData/158b2107-4250-4be7-a35e-812f1231266a> rdfs:comment
+      "2620 studies in the form of films ,DICOM images, covering malignant, benign, and normal diagnoses. It was originally produced as part of the DDSM" .
+  
+  <https://rainsproject.org/InstanceData/1fd4a69f-3700-416c-84e2-1347f3c50acf> rdfs:comment
+      "none, but the DDSM was funded by DOD Breast Cancer Research Program and US Army Research and Material Command" .
+  
+  <https://rainsproject.org/InstanceData/3218db60-49be-4f25-a10c-60a990209056> rdfs:comment
+      "collected from four American hospitals with patient consent (Massachusetts General Hospital, Wake Forest University School of Medicine, Sacred Heart Hospital, and Washington University of St Louis School of Medicine)" .
+  
+  <https://rainsproject.org/InstanceData/27ed453a-6933-4720-85ea-912a70e1a4ec> rdfs:comment
+      "raw pixel data was converted into 64-bit optical density values, which were in turn re-mapped to 16-bit grey scale TIFF files and finally converted to DICOM format. A noise reduction function was applied to the DICOM format. Images were cropped and a lesion segmentation algorithm was applied. Images were split 80percent marked for training and 20percent marked for testing with very close percentage of case numbers in each" .
+  
+  <https://rainsproject.org/InstanceData/7b871b89-59f0-4091-9727-92abda2672f6> rdfs:comment
+      "A small dataset to be used for CAD (Computer-Aided Detection and Diagnosis) research to aid in the development and testing of decision support systems" .
+  
+  <https://rainsproject.org/InstanceData/648ecbf7-a6d7-47b3-a165-8442abefd4ea> rdfs:comment
+      "scanned film instead of full field digital mammograms" .
+  
+  <https://rainsproject.org/InstanceData/3733cc6a-fa95-42d4-b163-a91af799a2d9> rdfs:comment
+      "the DDSM was released in 1997, only 2,620 studies" .
+  
+  <https://rainsproject.org/InstanceData/6cf16252-3a31-4f5f-be14-b204ea8164b6> rdfs:comment
+      "" .
+  
+  <https://rainsproject.org/InstanceData/9f9150ad-3040-489e-bbc0-c5a2944d54b1> rdfs:comment
+      "We think it complies with GDPR" .
+  
+  <https://rainsproject.org/InstanceData/fee0d47b-a4f0-4b12-bd53-77333813b890> rdfs:comment
+      "we think it complies with NHS Code of conduct" .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> rdfs:comment
+      "descriptions of the components that the system must be integrated with The electronic health system Scottish Breast Screening System (SBSS) which contains the patient files, and with the Picture archiving and communication system (PACS) which stores the mammography images and is already integrated with SBSS. The designs of the components which are not core-AI API wrappers for reports" .
+  
+  <https://rainsproject.org/InstanceData/1cedca06-0123-426e-9036-bc44844ca955> rdfs:comment
+      "The following will be audited: recall rates, positive predictive values, cancers missed through disagreements, and interval cancers (cancers detected between screening rounds, presenting symptomatically)" .
+  
+  <https://rainsproject.org/InstanceData/b56b6add-3ff9-4898-bdee-342414f721aa> rdfs:comment
+      "the region of interest (ROI) is to be annotated with has been diagnosed including the mass, microcalcification, architectural distortion, and bilateral asymmetry" .
+  
+  <https://rainsproject.org/InstanceData/8c826116-5132-48d4-905c-362b36a749ec> rdfs:comment
+      "one human reader will make a diagnosis and the AI System will make its diagnosis. If there is a disagreement, then a second human reader will access both diagnoses and the images and make their own diagnosis which is final" .
+  
+  <https://rainsproject.org/InstanceData/ce7c57c9-3875-4e86-aa3f-e6447244bdae> rdfs:comment
+      "if PACS doesnt produce DICOM with same picture quality then the ML model performance wont be good" .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> rdfs:comment
+      "a Deep learning (DL) breast cancer image analysis model" .
+  
+  <https://rainsproject.org/InstanceData/22444a86-a0fb-4ecd-a177-11f60d0e18b0> rdfs:comment
+      " computer aided breast cancer image analysis" .
+  
+  <https://rainsproject.org/InstanceData/d22e6d8b-f00a-4d75-9dc3-8a0581bfc809> rdfs:comment
+      "Convolutional Neural Network" .
+  
+  <https://rainsproject.org/InstanceData/44e08eb6-55b2-4e3a-b75a-acc35ed98f8e> rdfs:comment
+      "" .
+  
+  <https://rainsproject.org/InstanceData/278605bd-fe99-4936-97d0-7c225356638e> rdfs:comment
+      "it is not possible to perform feature selection or to fine-tune hyperparameters" .
+  
+  <https://rainsproject.org/InstanceData/e0fd79f2-dc04-42a8-9a30-2fd47e7515d0> rdfs:comment
+      "DL NN perform better with larger amounts of images than they do on smaller amounts (overfitting problem which can be mitigated by applying augmentation techniques)" .
+  
+  <https://rainsproject.org/InstanceData/cf9abe46-cfe0-46f6-926b-223846f953a3> rdfs:comment
+      "EU Class IIb Medical Devices Directive" .
+  
+  <https://rainsproject.org/InstanceData/4beac876-690f-453c-8611-ba237a84e1a8> rdfs:comment
+      "ISO 13485, ISO 149712019, and NHS Code of conduct" .
+  
+  <https://rainsproject.org/InstanceData/27d07911-d8da-4f99-b0e2-8cfbc0cd977c> rdfs:comment
+      "check the model with minimum sample DICOM images from PACS currently in use" .
+  
+  <https://rainsproject.org/InstanceData/1ba7e974-5c55-4250-bb20-2b7f31130223> rdfs:comment
+      "all sample DICOM images from currently deployed PACS must be successfully input to the system" .
+  
+  <https://rainsproject.org/InstanceData/1b635f72-74f6-4ffd-9c93-891e39d7cec6> rdfs:comment
+      "the proposed evaluation technique is 5fold Cross Validation (CV)" .
+  
+  <https://rainsproject.org/InstanceData/96060ef9-7567-40c1-9e7a-27250e46c329> rdfs:comment
+      "90 percent of the cancers must be detected" .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  <https://w3id.org/sao> rdfs:label "The System Accountability Ontology" .
+  
+  :hasAccountableAgent rdfs:label "has accountable agent" .
+  
+  :isAccountableFor rdfs:label "is accountable for" .
+  
+  :AccountableAgent rdfs:label "Accountable Agent" .
+  
+  :hasRelatedAccountableResult rdfs:label "has related accountable result" .
+  
+  :relatesToAccountableObject rdfs:label "relates to accountable object" .
+  
+  :AccountableObject rdfs:label "Accountable Object" .
+  
+  :AccountableResult rdfs:label "Accountable Result" .
+  
+  :hasSpecifiedAccountabiltyPlan rdfs:label "has specified accountability plan" .
+  
+  :specifiedForSystem rdfs:label "specified for system" .
+  
+  :System rdfs:label "System" .
+  
+  :AccountabilityPlan rdfs:label "Accountability Plan" .
+  
+  :impacts rdfs:label "impacts" .
+  
+  :isImpactedBy rdfs:label "is impacted by" .
+  
+  :AccountableAction rdfs:label "Accountable Action" .
+  
+  :InformationElement rdfs:label "Information Element" .
+  
+  :InformationRealization rdfs:label "Information Realization" .
+  
+  <https://w3id.org/rains> rdfs:label "The RAInS Ontology"@en .
+  
+  rains:hasRealizableObjectCharacteristic rdfs:label "hasRealizableObjectCharacteristic" .
+  
+  rains:isCharacteristicOfRealizableObject rdfs:label "isCharacteristicOfRealizableObject" .
+  
+  rains:RealizableObject rdfs:label "Realizable Object" .
+  
+  rains:RealizableObjectCharacteristic rdfs:label "Realizable Object Characteristic" .
+  
+  rains:isReusedObject rdfs:label "isReusedObject" .
+  
+  rains:EvaluationMeassure rdfs:label "Evaluation Measure" .
+  
+  rains:EvaluationProcedure rdfs:label "Evaluation Procedure" .
+  
+  rains:AI_System rdfs:label "AI System" .
+  
+  rains:ApprovalDecision rdfs:label "Approval Decision" .
+  
+  rains:HumanDecision rdfs:label "Human Decision" .
+  
+  rains:Bias rdfs:label "Bias" .
+  
+  rains:Risk rdfs:label "Risk" .
+  
+  rains:ComplianceAssuranceDecision rdfs:label "Compliance Assurance Decision" .
+  
+  rains:ComplianceEntity rdfs:label "Compliance Entity" .
+  
+  rains:ComplianceSpecification rdfs:label "Compliance Specification" .
+  
+  rains:DesignSpecification rdfs:label "Design Specification" .
+  
+  rains:DataCollectionProcedure rdfs:label "Data Collection Procedure" .
+  
+  rains:DataPreprocessingProcedure rdfs:label "Data Preprocessing Procedure" .
+  
+  rains:DatasetSpecification rdfs:label "Dataset Specification" .
+  
+  rains:Decide rdfs:label "Decide" .
+  
+  rains:ProduceSpecification rdfs:label "Produce Specification" .
+  
+  rains:DesignStageAccountabilityPlan rdfs:label "Design Stage Accountability Plan" .
+  
+  rains:EvaluationSpecification rdfs:label "Evaluation Specification" .
+  
+  rains:FitnessConfirmationDecision rdfs:label "Fitness Confirmation Decision" .
+  
+  rains:Funding rdfs:label "Funding" .
+  
+  rains:HardLaw rdfs:label "Hard Law" .
+  
+  rains:SoftLaw rdfs:label "Soft Law" .
+  
+  rains:IncorrectUseCase rdfs:label "Incorrect Use Case" .
+  
+  rains:UseCase rdfs:label "Use Case" .
+  
+  rains:IntendedUseCase rdfs:label "Intended Use Case" .
+  
+  rains:IntendedUserGroup rdfs:label "Intended User Group" .
+  
+  rains:Limitation rdfs:label "Limitation" .
+  
+  rains:ModelSpecification rdfs:label "Model Specification" .
+  
+  rains:SupportingInfrastructure rdfs:label "Supporting Infrastructure" .
+  
+  rains:SupportingInfrastructureSpecification rdfs:label "Supporting Infrastructure Specification" .
+  
+  rains:SystemAuditMechanism rdfs:label "System Audit Mechanism" .
+  
+  rains:SystemExplanationMechanism rdfs:label "System Explanation Mechanism" .
+  
+  rains:SystemHumanOversightMechanism rdfs:label "System Human Oversight Mechanism" .
+  
+  rains:SystemPurposeSpecification rdfs:label "System Purpose Specification" .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> rdfs:label
+      "NHS BCSS Mammography AI System" .
+  
+  <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> rdfs:label
+      "Decision Logic DS" .
+  
+  <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> rdfs:label
+      "Decision Logic about MLM" .
+  
+  <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> rdfs:label
+      "Decision Logic about Evaluation" .
+  
+  <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> rdfs:label
+      "Decision Logic SI" .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> rdfs:label
+      " Produce Specification for System Purpose" .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> rdfs:label
+      "System Purpose Specification" .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> rdfs:label
+      " Produce Specification for Dataset" .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> rdfs:label
+      " Produce Specification for ML Model" .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> rdfs:label
+      " Produce Specification for Supporting Infrastructure" .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> rdfs:label
+      " Produce Specification for DS and Model Evaluation" .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> rdfs:label
+      " Produce Specification for System Evaluation" .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> rdfs:label
+      " Decide Confirm DS Specification Fitness" .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> rdfs:label
+      " Decide Confirm ML Specification Fitness" .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> rdfs:label
+      " Decide Confirm AI System Evaluation Specification Fitness" .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> rdfs:label
+      " Decide Confirm Supporting Infrastructure Specification Fitness" .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> rdfs:label
+      " Produce Specification for Compliance Requirements" .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> rdfs:label
+      "System Compliance Specification" .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> rdfs:label
+      " Decide Assure DS Specification Compliance" .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> rdfs:label
+      " Decide Assure ML Specification Compliance" .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> rdfs:label
+      " Decide Assure AI System Evaluation Specification Compliance" .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> rdfs:label
+      " Decide Assure Supporting Infrastructure Specification Compliance" .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> rdfs:label
+      "Dataset Specification" .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> rdfs:label
+      " Decide Approve DS Specification" .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> rdfs:label
+      "Model Specification" .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> rdfs:label
+      " Decide Approve ML Specification" .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> rdfs:label
+      "Supporting Infrastructure Specification" .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> rdfs:label
+      " Decide Approve Supporting Infrastructure Specification" .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> rdfs:label
+      "Evaluation Specification for DS and Model" .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> rdfs:label
+      " Decide Approve AI System Evaluation Specification" .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> rdfs:label
+      "Evaluation Specification for Whole System" .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> rdfs:label
+      "DS Fitness Confirmation Decision" .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> rdfs:label
+      "MLM Fitness Confirmation Decision" .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> rdfs:label
+      "System Evaluation Fitness Confirmation Decision" .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> rdfs:label
+      "SI Fitness Confirmation Decision" .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> rdfs:label
+      "DS Compliance Assurance Decision" .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> rdfs:label
+      "MLM Compliance Assurance Decision" .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> rdfs:label
+      "AIS Evaluation Compliance Assurance Decision" .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> rdfs:label
+      "SI Compliance Assurance Decision" .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> rdfs:label
+      "DS Approval Decision" .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> rdfs:label
+      "MLM Approval Decision" .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> rdfs:label
+      "AIS Eval Approval Decision" .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> rdfs:label
+      "SI Spec Approval Decision" .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/InstanceData/bd6d0e04-e9d4-4ca1-84a5-8a3ff994acd9> rdfs:label
+      "Class IIb Medical Devices Directive and GDPR" .
+  
+  <https://rainsproject.org/InstanceData/ebf6679a-ec90-4d70-b6cf-0edea9ac4ab0> rdfs:label
+      "Soft Laws ISO 13485, ISO 149712019, and NHS Code of conduct" .
+  
+  <https://rainsproject.org/InstanceData/a7ab4e94-f276-464d-a375-30291b295e48> rdfs:label
+      "Use case breast cancer detection" .
+  
+  <https://rainsproject.org/InstanceData/d10c0b71-4563-43a3-b89d-57bec4217baf> rdfs:label
+      "User group Radiologists" .
+  
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> rdfs:label
+      "Dataset CBISDDSM " .
+  
+  <https://rainsproject.org/InstanceData/158b2107-4250-4be7-a35e-812f1231266a> rdfs:label
+      "DS Chars" .
+  
+  <https://rainsproject.org/InstanceData/1fd4a69f-3700-416c-84e2-1347f3c50acf> rdfs:label
+      "DS Funding" .
+  
+  <https://rainsproject.org/InstanceData/3218db60-49be-4f25-a10c-60a990209056> rdfs:label
+      "DS Collection Procedure" .
+  
+  <https://rainsproject.org/InstanceData/27ed453a-6933-4720-85ea-912a70e1a4ec> rdfs:label
+      "DS Preprocessing Procedure" .
+  
+  <https://rainsproject.org/InstanceData/7b871b89-59f0-4091-9727-92abda2672f6> rdfs:label
+      "DS Intended Usecase" .
+  
+  <https://rainsproject.org/InstanceData/648ecbf7-a6d7-47b3-a165-8442abefd4ea> rdfs:label
+      "DS Limitations" .
+  
+  <https://rainsproject.org/InstanceData/3733cc6a-fa95-42d4-b163-a91af799a2d9> rdfs:label
+      "DS Risks" .
+  
+  <https://rainsproject.org/InstanceData/6cf16252-3a31-4f5f-be14-b204ea8164b6> rdfs:label
+      "DS License" .
+  
+  <https://rainsproject.org/InstanceData/9f9150ad-3040-489e-bbc0-c5a2944d54b1> rdfs:label
+      "DS Hard Law Compliance" .
+  
+  <https://rainsproject.org/InstanceData/fee0d47b-a4f0-4b12-bd53-77333813b890> rdfs:label
+      "DS Soft Law compliance" .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> rdfs:label
+      "Supporting Infrastructure description" .
+  
+  <https://rainsproject.org/InstanceData/1cedca06-0123-426e-9036-bc44844ca955> rdfs:label
+      "System Audit Mechanism description" .
+  
+  <https://rainsproject.org/InstanceData/b56b6add-3ff9-4898-bdee-342414f721aa> rdfs:label
+      "System Explanation Mechanism Description" .
+  
+  <https://rainsproject.org/InstanceData/8c826116-5132-48d4-905c-362b36a749ec> rdfs:label
+      "Description of System Human Agency and Oversight Mechanism " .
+  
+  <https://rainsproject.org/InstanceData/ce7c57c9-3875-4e86-aa3f-e6447244bdae> rdfs:label
+      "SI Limitation" .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> rdfs:label
+      "Model is DL" .
+  
+  <https://rainsproject.org/InstanceData/22444a86-a0fb-4ecd-a177-11f60d0e18b0> rdfs:label
+      "ML Model Intended Use Case" .
+  
+  <https://rainsproject.org/InstanceData/d22e6d8b-f00a-4d75-9dc3-8a0581bfc809> rdfs:label
+      "ML Algorithm CNN" .
+  
+  <https://rainsproject.org/InstanceData/44e08eb6-55b2-4e3a-b75a-acc35ed98f8e> rdfs:label
+      "ML Model Chars" .
+  
+  <https://rainsproject.org/InstanceData/278605bd-fe99-4936-97d0-7c225356638e> rdfs:label
+      "ML Model Limits" .
+  
+  <https://rainsproject.org/InstanceData/e0fd79f2-dc04-42a8-9a30-2fd47e7515d0> rdfs:label
+      "ML Model Risks" .
+  
+  <https://rainsproject.org/InstanceData/cf9abe46-cfe0-46f6-926b-223846f953a3> rdfs:label
+      "ML Model Hard Law compliance" .
+  
+  <https://rainsproject.org/InstanceData/4beac876-690f-453c-8611-ba237a84e1a8> rdfs:label
+      "ML Model Soft Law compliance" .
+  
+  <https://rainsproject.org/InstanceData/27d07911-d8da-4f99-b0e2-8cfbc0cd977c> rdfs:label
+      "System Eval Procedure" .
+  
+  <https://rainsproject.org/InstanceData/1ba7e974-5c55-4250-bb20-2b7f31130223> rdfs:label
+      "System Eval Measure" .
+  
+  <https://rainsproject.org/InstanceData/1b635f72-74f6-4ffd-9c93-891e39d7cec6> rdfs:label
+      "DS MLM Eval Procedure" .
+  
+  <https://rainsproject.org/InstanceData/96060ef9-7567-40c1-9e7a-27250e46c329> rdfs:label
+      "DS MLM Eval Measure" .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  <https://w3id.org/sao> owl:versionInfo "1.0. December 2020"@en .
+  
+  <https://w3id.org/rains> owl:versionInfo "1.1, December 2020"@en .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> .
+  
+  <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> .
+  
+  <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> .
+  
+  <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> .
+  
+  <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> .
+  
+  <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> .
+  
+  <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> .
+  
+  <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> .
+  
+  <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> .
+  
+  <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> .
+  
+  <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> .
+  
+  <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> .
+  
+  <https://rainsproject.org/InstanceData/c8cc861b-b4a5-4e2e-9e6d-1ac21287cdc0> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> .
+  
+  <https://rainsproject.org/InstanceData/4124f46a-b007-48a4-b352-95490cf6fd15> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> .
+  
+  <https://rainsproject.org/InstanceData/e9694fb3-b627-4bad-81b9-3fc140e7bc30> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> .
+  
+  <https://rainsproject.org/InstanceData/508cd1d7-2f9c-4c5a-acb8-e775c4e02374> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> .
+  
+  <https://rainsproject.org/InstanceData/5e03cf2c-0a97-4857-a6b6-6e8a7c8b08af> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> .
+  
+  <https://rainsproject.org/InstanceData/c71d7ecc-9f32-4142-b06c-44e36c705e3e> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> .
+  
+  <https://rainsproject.org/InstanceData/db4ba7ec-f8a4-4fc2-8872-cdee977b1c5a> ep-plan:correspondsToVariable
+      <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  :hasAccountableAgent owl:inverseOf :isAccountableFor .
+  
+  :hasRelatedAccountableResult owl:inverseOf :relatesToAccountableObject .
+  
+  :hasSpecifiedAccountabiltyPlan owl:inverseOf :specifiedForSystem .
+  
+  :impacts owl:inverseOf :isImpactedBy .
+  
+  rains:hasRealizableObjectCharacteristic owl:inverseOf rains:isCharacteristicOfRealizableObject .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://www.abdn.ac.uk/ncs/people/profiles/iman.naja> :isAccountableFor <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> :relatesToAccountableObject
+      <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/d1d1bec5-e452-4653-84bc-c19592bc12f9> :impacts
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/29fa0e98-2b4a-4abd-8b36-eb0aa7188450> :impacts
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/050dc7eb-631e-4d25-8f02-8fcba58d2854> :impacts
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/6d0e4bad-e761-4af8-ba7f-a052028d6919> :impacts
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  _:genid-3939e04c59b9400c80552c0136d326b8-node409 owl:onProperty ep-plan:hasCorrespondingEntity .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node410 owl:onProperty <http://www.w3.org/ns/prov#hadMember> .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node411 owl:onProperty ep-plan:correspondsToVariable .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node412 owl:onProperty ep-plan:hasOutputVariable .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node413 owl:onProperty ep-plan:hasOutputVariable .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node436 owl:onProperty ep-plan:hasOutputVariable .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node437 owl:onProperty ep-plan:hasOutputVariable .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node409 owl:allValuesFrom :InformationRealization .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node410 owl:allValuesFrom :InformationElement .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node411 owl:allValuesFrom :AccountableResult .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> ep-plan:hasOutputVariable
+      <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> rains:isReusedObject
+      true .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> rains:isReusedObject
+      false .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> rains:isReusedObject
+      false .
+}
+
+<https://rainsproject.org/WorkflowComponents> {
+  _:genid-3939e04c59b9400c80552c0136d326b8-node412 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node413 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node436 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node437 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node412 owl:onClass rains:HumanDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node413 owl:onClass rains:DesignSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node436 owl:onClass rains:HumanDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node437 owl:onClass rains:DesignSpecification .
+  
+  rains:DesignSpecification owl:disjointWith rains:HumanDecision .
+  
+  rains:Decide owl:disjointWith rains:ProduceSpecification .
+  
+  rains:HardLaw owl:disjointWith rains:SoftLaw .
+  
+  rains:IncorrectUseCase owl:disjointWith rains:IntendedUseCase .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node414 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node415 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node421 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node422 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node425 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node426 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node429 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node430 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node438 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node439 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node445 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node446 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node449 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node450 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node453 owl:members _:genid-3939e04c59b9400c80552c0136d326b8-node454 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node415 rdf:first mls:Algorithm .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node422 rdf:first mls:Dataset .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node426 rdf:first rains:ApprovalDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node430 rdf:first rains:ComplianceSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node439 rdf:first mls:Algorithm .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node446 rdf:first mls:Dataset .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node450 rdf:first rains:ApprovalDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node454 rdf:first rains:ComplianceSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node416 rdf:first mls:DatasetCharacteristic .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node417 rdf:first mls:ModelCharacteristic .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node418 rdf:first rains:SystemAuditMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node419 rdf:first rains:SystemExplanationMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node420 rdf:first rains:SystemHumanOversightMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node423 rdf:first mls:Model .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node424 rdf:first rains:SupportingInfrastructure .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node427 rdf:first rains:ComplianceAssuranceDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node428 rdf:first rains:FitnessConfirmationDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node431 rdf:first rains:DatasetSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node432 rdf:first rains:EvaluationSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node433 rdf:first rains:ModelSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node434 rdf:first rains:SupportingInfrastructureSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node435 rdf:first rains:SystemPurposeSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node440 rdf:first mls:DatasetCharacteristic .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node441 rdf:first mls:ModelCharacteristic .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node442 rdf:first rains:SystemAuditMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node443 rdf:first rains:SystemExplanationMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node444 rdf:first rains:SystemHumanOversightMechanism .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node447 rdf:first mls:Model .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node448 rdf:first rains:SupportingInfrastructure .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node451 rdf:first rains:ComplianceAssuranceDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node452 rdf:first rains:FitnessConfirmationDecision .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node455 rdf:first rains:DatasetSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node456 rdf:first rains:EvaluationSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node457 rdf:first rains:ModelSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node458 rdf:first rains:SupportingInfrastructureSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node459 rdf:first rains:SystemPurposeSpecification .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node415 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node416 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node422 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node423 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node426 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node427 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node430 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node431 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node439 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node440 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node446 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node447 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node450 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node451 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node454 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node455 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node416 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node417 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node417 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node418 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node418 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node419 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node419 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node420 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node420 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node423 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node424 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node424 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node427 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node428 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node428 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node431 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node432 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node432 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node433 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node433 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node434 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node434 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node435 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node435 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node440 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node441 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node441 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node442 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node442 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node443 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node443 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node444 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node444 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node447 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node448 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node448 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node451 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node452 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node452 rdf:rest rdf:nil .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node455 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node456 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node456 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node457 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node457 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node458 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node458 rdf:rest _:genid-3939e04c59b9400c80552c0136d326b8-node459 .
+  
+  _:genid-3939e04c59b9400c80552c0136d326b8-node459 rdf:rest rdf:nil .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> af:hasPlansStoredInGraph
+      <https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> .
+}
+
+<https://rainsproject.org/NamedGraph/d44792ce-b597-4ccb-ac51-660bca698f68> {
+  <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> rains:specifiedForSystem
+      <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> .
+  
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> af:belongsToRow
+      "step_row_0" .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> af:belongsToRow
+      "step_row_0" .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> af:belongsToRow
+      "step_row_2" .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> af:belongsToRow
+      "step_row_2" .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> af:belongsToRow
+      "step_row_0" .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> af:belongsToRow
+      "step_row_0" .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> af:belongsToRow
+      "step_row_1" .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> af:belongsToRow
+      "step_row_2" .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> af:belongsToRow
+      "step_row_2" .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> af:belongsToRow
+      "step_row_3" .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> af:belongsToRow
+      "step_row_4" .
+  
+  <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> ep-plan:isElementOfPlan
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332>, <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee>,
+      <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606>, <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7>,
+      <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d>, <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d>,
+      <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751>, <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc>,
+      <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332>, <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee>,
+      <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606>, <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7>,
+      <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d>, <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1>,
+      <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9>, <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b>,
+      <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7>, <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d>,
+      <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d>, <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1>,
+      <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7>, <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d>,
+      <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751>, <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9>,
+      <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d>, <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237>,
+      <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c>, <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc>, <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b>,
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc>, <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b>,
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> ep-plan:isInputVariableOf
+      <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> .
+  
+  <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> .
+  
+  <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> .
+  
+  <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> .
+  
+  <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> .
+  
+  <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> .
+  
+  <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> .
+  
+  <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> .
+  
+  <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> .
+  
+  <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> .
+  
+  <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> .
+  
+  <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> .
+  
+  <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> .
+  
+  <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> .
+  
+  <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> .
+  
+  <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> .
+  
+  <https://rainsproject.org/InstanceData/6fbceaf0-ceb0-4b2a-ac27-462ca5d29458> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> .
+  
+  <https://rainsproject.org/InstanceData/35ee5169-0aca-4819-b562-2ea44cd63012> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> .
+  
+  <https://rainsproject.org/InstanceData/3ade5392-406c-449e-bb91-bdde85b834ad> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/395658f9-714c-439b-9221-71ec70f1b7de> ep-plan:isOutputVariableOf
+      <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> .
+  
+  <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> .
+  
+  <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> .
+  
+  <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e> .
+  
+  <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>,
+      <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682>, <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> .
+  
+  <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>,
+      <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682>, <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413>,
+      <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> .
+  
+  <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> .
+  
+  <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> .
+  
+  <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e>,
+      <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> .
+  
+  <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/b4ec8cf5-66d8-4dd7-9a71-72904adde3ec>, <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> .
+  
+  <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>, <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682> .
+  
+  <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>, <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413> .
+  
+  <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>, <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e>,
+      <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d> .
+  
+  <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/29c408ca-35d8-4d59-a7be-fec15938808e>, <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591> .
+  
+  <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/d34ce7ed-aaa8-4c66-bbd0-993138cf8682>, <https://rainsproject.org/InstanceData/5dd20491-0b17-495d-8d0a-7ef15ef1593b>,
+      <https://rainsproject.org/InstanceData/a08cd2f7-81f5-416a-81b0-92b9a818141a> .
+  
+  <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/d00999d7-d28e-4112-bee6-a6c95cf05413>, <https://rainsproject.org/InstanceData/d4b1adbb-5561-463a-a0a5-fc882d88827b>,
+      <https://rainsproject.org/InstanceData/7c9583ee-3238-4350-b7a8-c0be37c2b634> .
+  
+  <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/094c842c-56cc-4435-9850-9f7a1960f591>, <https://rainsproject.org/InstanceData/5d56ac95-454a-4c59-836b-6e08f20567c8>,
+      <https://rainsproject.org/InstanceData/c4c9eb1b-54d0-414a-91bf-1458033d1257> .
+  
+  <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> ep-plan:hasInputVariable
+      <https://rainsproject.org/InstanceData/e108a50d-9c57-4058-a8eb-77ede31e666e>, <https://rainsproject.org/InstanceData/5fb3ec6d-6a67-4489-a9ab-696a9c0bf51d>,
+      <https://rainsproject.org/InstanceData/3285e660-1336-41d7-8462-2117fd160b1a>, <https://rainsproject.org/InstanceData/ba6e3b62-f964-44d7-8c75-06fe6ffb0fbd> .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> <http://www.w3.org/ns/prov#wasDerivedFrom>
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> <http://www.w3.org/ns/prov#wasDerivedFrom>
+      <https://rainsproject.org/InstanceData/c8453e77-1035-4dfd-b424-076742e647ee> .
+}
+
+<https://rainsproject.org/Systems> {
+  <https://rainsproject.org/InstanceData/41a7c62d-df0f-4147-abfd-20222f29d9e6> af:hasAccountabilityTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+}
+
+<https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> {
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-02-18T22:29:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-02-18T22:31:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-02T22:33:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-02T22:37:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-02T22:37:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-05T22:57:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-05T22:57:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-08T20:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-09T23:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-09T23:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-09T23:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> <http://www.w3.org/ns/prov#endedAtTime>
+      "2021-03-09T23:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-02-15T22:29:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-02-15T22:31:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-02-22T22:33:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-02-22T22:37:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-02-22T22:37:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-04T22:57:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-04T22:57:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-08T08:02:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-09T11:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-09T11:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-09T11:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> <http://www.w3.org/ns/prov#startedAtTime>
+      "2021-03-09T11:20:00"^^xsd:dateTime .
+  
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/iman.naja> .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/milan.markovic> .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/caitlin> .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/c.smith> .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/w.pang> .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/a.smith> .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/d.smith> .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/bob.smith> .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/bob.smith> .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/caitlin> .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/r.smith> .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/rebecca> .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/q.smith> .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/rebecca> .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/p.smith> .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/o.smith> .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/n.smith> .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/m.smith> .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> <http://www.w3.org/ns/prov#wasAssociatedWith>
+      <https://www.abdn.ac.uk/ncs/people/profiles/p.edwards> .
+  
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/6be63a1c-c678-4cc3-accc-a9b5352444e6> .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/fbbc2818-5055-4fb6-81f7-3b9c2e024d6a> .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/249736c3-5e74-4c6b-ad20-b30f7e8a4332> .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/8d17335f-dd2b-4a30-94d0-02fe62e0e606> .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/cbf776a7-74e3-4c4b-adf0-873737a8afee> .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/59c986e7-7bbc-4fca-b999-cf057cdbcf1d> .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/8365e4a6-f1c8-4d22-af6c-926407cfd9c7> .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/1fd5bde0-bfec-40a3-b12c-b895e9228d8d> .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/30c4fd72-1041-41ff-b774-c6cbdfb78237> .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/4e603eb0-5abe-4ac9-9ca7-97c45f03f63b> .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/62afc305-740a-4f26-94ce-e497363221fc> .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/a733da9a-c406-43f5-8a0f-1b95661aedf1> .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/ad0ba343-38c5-426e-955a-b16b9108e751> .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/bf3787a7-4e94-4d92-b48e-045d7cd3b94c> .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/d2ab7177-cf8b-4c7e-8f8e-16881dd768b9> .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/2643b12f-fe41-406e-8044-bbd6f1786d5c> .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/ab7dae07-d2d1-41fe-ad03-b48f3a84f2b5> .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/cb075998-46b0-4bae-b3d9-26db5a442514> .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> ep-plan:correspondsToStep
+      <https://rainsproject.org/InstanceData/e8b6c6ad-26d8-4893-b189-98affc467db4> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/iman.naja> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/bob.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/milan.markovic> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/caitlin> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/c.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/w.pang> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/a.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/d.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/r.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/rebecca> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/q.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/p.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/o.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/n.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/m.smith> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://www.abdn.ac.uk/ncs/people/profiles/p.edwards> ep-plan:isElementOfTrace <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/c8cc861b-b4a5-4e2e-9e6d-1ac21287cdc0> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/4124f46a-b007-48a4-b352-95490cf6fd15> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/e9694fb3-b627-4bad-81b9-3fc140e7bc30> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/508cd1d7-2f9c-4c5a-acb8-e775c4e02374> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/5e03cf2c-0a97-4857-a6b6-6e8a7c8b08af> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/c71d7ecc-9f32-4142-b06c-44e36c705e3e> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/db4ba7ec-f8a4-4fc2-8872-cdee977b1c5a> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/bd6d0e04-e9d4-4ca1-84a5-8a3ff994acd9> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/ebf6679a-ec90-4d70-b6cf-0edea9ac4ab0> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/a7ab4e94-f276-464d-a375-30291b295e48> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/d10c0b71-4563-43a3-b89d-57bec4217baf> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/158b2107-4250-4be7-a35e-812f1231266a> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/1fd4a69f-3700-416c-84e2-1347f3c50acf> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/3218db60-49be-4f25-a10c-60a990209056> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/27ed453a-6933-4720-85ea-912a70e1a4ec> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/7b871b89-59f0-4091-9727-92abda2672f6> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/648ecbf7-a6d7-47b3-a165-8442abefd4ea> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/3733cc6a-fa95-42d4-b163-a91af799a2d9> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/6cf16252-3a31-4f5f-be14-b204ea8164b6> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/9f9150ad-3040-489e-bbc0-c5a2944d54b1> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/fee0d47b-a4f0-4b12-bd53-77333813b890> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/1cedca06-0123-426e-9036-bc44844ca955> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/b56b6add-3ff9-4898-bdee-342414f721aa> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/8c826116-5132-48d4-905c-362b36a749ec> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/ce7c57c9-3875-4e86-aa3f-e6447244bdae> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/22444a86-a0fb-4ecd-a177-11f60d0e18b0> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/d22e6d8b-f00a-4d75-9dc3-8a0581bfc809> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/44e08eb6-55b2-4e3a-b75a-acc35ed98f8e> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/278605bd-fe99-4936-97d0-7c225356638e> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/e0fd79f2-dc04-42a8-9a30-2fd47e7515d0> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/cf9abe46-cfe0-46f6-926b-223846f953a3> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/4beac876-690f-453c-8611-ba237a84e1a8> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/27d07911-d8da-4f99-b0e2-8cfbc0cd977c> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/1ba7e974-5c55-4250-bb20-2b7f31130223> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/1b635f72-74f6-4ffd-9c93-891e39d7cec6> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/96060ef9-7567-40c1-9e7a-27250e46c329> ep-plan:isElementOfTrace
+      <https://rainsproject.org/NamedGraph/eed776c0-ed87-4e39-b0b4-e80d1d9a6f1c> .
+  
+  <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> .
+  
+  <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> .
+  
+  <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> .
+  
+  <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> .
+  
+  <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> .
+  
+  <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> .
+  
+  <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> .
+  
+  <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> .
+  
+  <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> <http://www.w3.org/ns/prov#used>
+      <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> .
+  
+  <https://rainsproject.org/InstanceData/416451ca-73d3-46c1-9269-2e9e492ec303> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/ec49861d-30b5-44ab-ab70-2f4250184816> .
+  
+  <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/bb348125-d28a-46f2-8615-1e5c8263a412> .
+  
+  <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/3fd9f0f7-e8bc-4b50-be71-b5db135e21e4> .
+  
+  <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/424be560-a37d-43c0-b40b-1d4ea1e0b830> .
+  
+  <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/07303727-bb84-4d77-9d50-2b7a25ad1c4c> .
+  
+  <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/91a83d57-9195-45ff-a684-18db8c2f590e> .
+  
+  <https://rainsproject.org/InstanceData/3e545765-db15-4b1f-93ff-acbf0051ba52> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/95d0342a-d91a-4136-8e97-c4a572d8ce55> .
+  
+  <https://rainsproject.org/InstanceData/f8177c15-c347-4fc1-bc3c-85be83b4ee1b> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/09b1ff96-ad27-456e-8281-8778aa050131> .
+  
+  <https://rainsproject.org/InstanceData/983439c2-ecb8-4a29-b66b-4d238348be12> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/7bb3ae08-b860-4211-ab2a-f2c8088f8db9> .
+  
+  <https://rainsproject.org/InstanceData/98a7646a-8382-4044-8e34-5c80c4293357> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/4dd5a8fc-76a6-4b70-8b72-cb67ea782e8c> .
+  
+  <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/c61a435e-5819-40e9-9029-fb0418729f52> .
+  
+  <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/5e6d9c3b-fe52-41ef-8556-2e7a7a2a17b9> .
+  
+  <https://rainsproject.org/InstanceData/c8cc861b-b4a5-4e2e-9e6d-1ac21287cdc0> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/a79b037f-f24d-4c4b-b9f2-96dbed1e6313> .
+  
+  <https://rainsproject.org/InstanceData/4124f46a-b007-48a4-b352-95490cf6fd15> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/304bd7f6-7aac-4a68-9ea0-665314bd177b> .
+  
+  <https://rainsproject.org/InstanceData/e9694fb3-b627-4bad-81b9-3fc140e7bc30> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/5f9fbdc2-5a9c-47a7-95fb-20277eec123f> .
+  
+  <https://rainsproject.org/InstanceData/508cd1d7-2f9c-4c5a-acb8-e775c4e02374> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/b80f70c2-167c-41be-9f09-e6b85b6878cf> .
+  
+  <https://rainsproject.org/InstanceData/5e03cf2c-0a97-4857-a6b6-6e8a7c8b08af> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/dec7954a-91a4-451b-913c-3de17d939227> .
+  
+  <https://rainsproject.org/InstanceData/c71d7ecc-9f32-4142-b06c-44e36c705e3e> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/7bf881d8-4fa9-4a10-9875-b388a961d9fd> .
+  
+  <https://rainsproject.org/InstanceData/db4ba7ec-f8a4-4fc2-8872-cdee977b1c5a> <http://www.w3.org/ns/prov#wasGeneratedBy>
+      <https://rainsproject.org/InstanceData/e4f347b2-49b8-41de-b0f7-edce4c82a2eb> .
+  
+  <https://rainsproject.org/InstanceData/bd6d0e04-e9d4-4ca1-84a5-8a3ff994acd9> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> .
+  
+  <https://rainsproject.org/InstanceData/ebf6679a-ec90-4d70-b6cf-0edea9ac4ab0> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/e2f74e10-4b00-4f59-b4e5-1c839e12b368> .
+  
+  <https://rainsproject.org/InstanceData/a7ab4e94-f276-464d-a375-30291b295e48> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> .
+  
+  <https://rainsproject.org/InstanceData/d10c0b71-4563-43a3-b89d-57bec4217baf> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/6500ff20-dea3-46fe-8683-25eef4282950> .
+  
+  <https://rainsproject.org/InstanceData/786c5284-0631-4c6e-aa00-2794af432b17> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/158b2107-4250-4be7-a35e-812f1231266a> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/1fd4a69f-3700-416c-84e2-1347f3c50acf> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/3218db60-49be-4f25-a10c-60a990209056> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/27ed453a-6933-4720-85ea-912a70e1a4ec> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/7b871b89-59f0-4091-9727-92abda2672f6> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/648ecbf7-a6d7-47b3-a165-8442abefd4ea> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/3733cc6a-fa95-42d4-b163-a91af799a2d9> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/6cf16252-3a31-4f5f-be14-b204ea8164b6> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/9f9150ad-3040-489e-bbc0-c5a2944d54b1> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/fee0d47b-a4f0-4b12-bd53-77333813b890> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/02ee857f-d734-4dd7-a385-4735bdc95c6a> .
+  
+  <https://rainsproject.org/InstanceData/d1f95d87-7e51-46bc-87e4-066c3bd335a9> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/1cedca06-0123-426e-9036-bc44844ca955> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/b56b6add-3ff9-4898-bdee-342414f721aa> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/8c826116-5132-48d4-905c-362b36a749ec> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/ce7c57c9-3875-4e86-aa3f-e6447244bdae> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/da5b7fa3-1a5f-4b03-bcd7-e1a92e8dcf83> .
+  
+  <https://rainsproject.org/InstanceData/39f7653f-43da-42a3-97b4-56fd8f829d51> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/22444a86-a0fb-4ecd-a177-11f60d0e18b0> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/d22e6d8b-f00a-4d75-9dc3-8a0581bfc809> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/44e08eb6-55b2-4e3a-b75a-acc35ed98f8e> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/278605bd-fe99-4936-97d0-7c225356638e> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/e0fd79f2-dc04-42a8-9a30-2fd47e7515d0> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/cf9abe46-cfe0-46f6-926b-223846f953a3> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/4beac876-690f-453c-8611-ba237a84e1a8> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/eac0b414-30e3-440f-99a4-fa7122f353e6> .
+  
+  <https://rainsproject.org/InstanceData/27d07911-d8da-4f99-b0e2-8cfbc0cd977c> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> .
+  
+  <https://rainsproject.org/InstanceData/1ba7e974-5c55-4250-bb20-2b7f31130223> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/7b217932-515a-461c-b157-ae9585ef0fc4> .
+  
+  <https://rainsproject.org/InstanceData/1b635f72-74f6-4ffd-9c93-891e39d7cec6> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> .
+  
+  <https://rainsproject.org/InstanceData/96060ef9-7567-40c1-9e7a-27250e46c329> <http://www.w3.org/ns/prov#wasMemberOf>
+      <https://rainsproject.org/InstanceData/0ba57cd5-5c3a-4204-b51c-31b31f01930a> .
+}
