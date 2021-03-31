@@ -1,6 +1,8 @@
 # Example Knowledge Graph
 This readme is composed of two sections. The first section describes the scenario we used to create the knowledge graph. The second section consists of documentaion describing how the Accountability Fabric can be used. If you only want documentation on how to use the tool, without the benefit of the example scenario, jump to **Section II**.
 
+Competency questions were collected from the literature then reowrked into fewer concise ones. The mapping of the questions, along with the SAO and RAinS concepts that were created to address them, can be found here: https://github.com/RAINS-UOA/ESWC_2021_Evaluation/blob/main/exampleKnowledgeGraph/DesignCQs.xlsx
+
 ## Section I: Scenario: 
 The knowledge graph was created based on a fictional scenario, drawn up from our competency questions that were extracted from existing literature as well as experience from our conferences with our NHS partners.
 Assume that a hospital wants to replace one of its two human radiologists with an AI System which can read mammography images and detect breast cancer. 
